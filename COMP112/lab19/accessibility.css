@@ -1,0 +1,105 @@
+/*css for accessibility lab 19-5-08 Nick Meek*/
+html {
+    color: white;
+    background-color: gray;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 700px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+nav {
+    margin-right: 10px;
+    float: right;
+    width: 135px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav img {
+    border: 0px solid black;
+}
+
+section {
+    color: black;
+    background-color: white;
+    width: 520px;
+    float: left;
+    border: solid 2px black;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.picture {
+    float: right;
+    width: 200px;
+    margin: 10px;
+}
+
+.verse {
+    float: left;
+    width: 300px;
+    font-size: 11pt;
+    background-color: inherit;
+    color: black;
+}
+
+.clearing {
+    clear: left;
+}
+
+/* table stuff */
+td {
+    padding: 2px 10px 2px 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+legend {
+    color: black;
+    background-color: white;
+    padding: 2px 5px 2px 5px;
+    border: solid black 1px;
+}
+
+.done {
+    float: right;
+}
+
+form {
+    padding: 5px;
+}
+
+.textins label {
+    float: left;
+    width: 100px;
+}
+
+.textins input {
+    float: left;
+    width: 300px;
+}
+
+#sub {
+    margin: 2px;
+    padding: 5px;
+    color: black;
+    background-color: lime;
+    float: right;
+}
+
+#res {
+    margin: 2px;
+    padding: 5px;
+    color: black;
+    background-color: orange;
+    float: right;
+}

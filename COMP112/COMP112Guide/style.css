@@ -1,0 +1,19 @@
+body {
+    color: white;
+    background-color: black;
+    width: 600px;
+}
+
+h1 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25%;
+    border: dotted;
+    border-color: red;
+}
+
+h2 {
+    color: white;
+    background-color: aqua;
+}

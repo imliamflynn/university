@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>A Simple CSS Grid</title>
+    <style>
+        body {
+            margin: 40px;
+        }
+
+        .wrapper {
+            display: grid;
+            /*Make a grid container, children are grid items*/
+            grid-template-columns: 100px 400px 100px;
+            /*3 cols each 100px*/
+            grid-gap: 30px;
+            /*space between cols and rows*/
+            background-color: #fff;
+            color: #444;
+            justify-content: flex-start;
+            grid-template-rows: 100px 200px 200px 200px 100px 100px 100px;
+        }
+
+        .box {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150%;
+            text-align: center;
+        }
+
+        #a {
+            grid-column: 1/4;
+            grid-row: 1/3;
+        }
+
+        #b {
+            grid-column: 1/3
+        }
+
+        #d {
+            grid-column: 2/3
+        }
+
+        #e {
+            grid-column: 1/1
+        }
+
+        #f {
+            grid-column: 2/4;
+            grid-row: 5/7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box" id="a">A</div>
+        <div class="box" id="b">B</div>
+        <div class="box" id="c">C</div>
+        <div class="box" id="d">D</div>
+        <div class="box" id="e">E</div>
+        <div class="box" id="f">F</div>
+    </div>
+
+
+</body></html>

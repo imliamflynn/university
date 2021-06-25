@@ -1,0 +1,14 @@
+/**  
+ * Lab 6 MyPanelApp.java
+ * COMP160 July 2020
+ * Application class for MyPanel
+ */
+
+public class MyPanelApp{
+  
+  public static void main(String[] args){
+    MyPanel mp1 = new MyPanel();
+    mp1.decorate(java.awt.Color.blue, 180);
+  }
+}
+    

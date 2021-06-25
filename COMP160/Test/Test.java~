@@ -1,0 +1,11 @@
+public class Test{
+  public static void main(String[]args){
+    int [ ] [ ] data = { {4, 7, 2}, {3, 9}, {8, 8, 6} };
+    for (int[] x: data){
+      for (int y: x){
+        System.out.print(y + " ");
+      }
+      System.out.println();
+    }
+  }
+}

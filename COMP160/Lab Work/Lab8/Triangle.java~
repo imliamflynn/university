@@ -1,0 +1,32 @@
+/** Lab 8, Triangle.java
+  * Liam Flynn, August 2020
+  * 
+  */
+
+public class Triangle{
+  private int p1x;
+  private int p1y;
+  private int p2x;
+  private int p2y;
+  private int p3x;
+  private int p3y;
+  private String name;
+  
+  public Triangle(){}
+  
+  public Triangle(int pt1x, int pt1x, int pt1x, int pt1x, int pt1x, int pt1x, String nameIn){
+    
+  }
+  
+  private double calcSide(int x1, int y1, int x2, int y2){
+    
+  }
+  
+  public double getPerimeter(){
+    
+  }
+  
+  public String getName(){
+    
+  }
+}

@@ -1,0 +1,19 @@
+package shapes;
+import java.awt.*;
+
+/** Lab 23, Oval.java
+  * Liam Flynn, September 2020
+  * Uses random number generators to draw different circles
+  */
+
+public class Oval extends Shape{
+  public Oval(){
+    height = width * 4;
+  }
+  
+  /** When called, draws a oval */
+  public void display(Graphics g){
+    g.setColor(colour);
+    g.fillOval(x, y, width, height);
+  }
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class EvenSum{
+  
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter a number above 2: ");
+    int finish = input.nextLine();
+    int start = 2;
+    int sum = 0;
+    if (finish < 2){
+      System.out.println("Error! You entered a number below 2.");
+    }
+    else{
+      while (start <= finish){
+        if (start / 2 == 0){
+          sum += start;
+        }
+        start++;
+      }
+    }
+    System.out.println(sum);
+  }
+}
+        
+          

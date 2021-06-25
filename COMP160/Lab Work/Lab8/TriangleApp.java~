@@ -1,0 +1,11 @@
+/** Lab 8, TriangleApp.java
+  * Liam Flynn, August 2020
+  * Application class for Triangle.java
+  */
+
+public class TriangleApp{
+  
+  public static void main(String[]args){
+    
+  }
+}

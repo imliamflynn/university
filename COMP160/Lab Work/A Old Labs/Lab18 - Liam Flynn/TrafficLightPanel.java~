@@ -1,0 +1,29 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class TrafficLightPanel extends JPanel{
+  private JButton red;
+  private JButton amber;
+  private JButton green;
+  private JLabel last;
+  private JPanel buttonPanel;
+  
+  TrafficLightPanel(){
+    red = new JButton("Red");
+    amber = new JButton("Amber");
+    green = new JButton("Green");
+    last = new JLabel("Last pressed");
+    
+    setPreferredSize(new Dimension(200, 300));
+    setBackground(Color.blue);
+    
+    buttonPanel.setPreferredSize(new Dimension(80, 290));
+    buttonPanel.setBackground(Color.white);
+    buttonPanel.add(red);
+    buttonPanel.add(amber);
+    buttonPanel.add(green);
+    buttonPanel.add(last);
+    add(buttonPanel);
+  }
+}

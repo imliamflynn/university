@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New HTML5 Elements</title>
+    <style>
+        form {
+            width: 400px;
+            margin: auto;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="http://www.cs.otago.ac.nz/112formslab.cgi">
+        <div>
+            <input type="hidden" name="recipient" value="lenli455@student.otago.ac.nz">
+            <input type="hidden" name="subject" value="Lab16 Form">
+            <input type="hidden" name="followup-page" value="http://www.cs.otago.ac.nz/comp112/followup.html">
+        </div>
+        <fieldset>
+            <legend>New HTML5 Elements</legend>
+            <ul>
+                <li>
+                    <label>Time: <input type="time" name="time" required></label>
+                </li>
+                <li>
+                    <label>Date: <input type="date" name="date" required></label>
+                </li>
+                <li>
+                    <label>URL: <input type="url" name="url" required></label>
+                </li>
+                <li>
+                    <label>Number: <input type="number" name="number" required></label>
+                </li>
+                <li>
+                    <label>Range: <input type="range" name="range" min="0" max="4" required></label>
+                </li>
+                <li>
+                    <input type="submit">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body></html>

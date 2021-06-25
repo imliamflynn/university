@@ -1,0 +1,23 @@
+/** Liam Flynn
+  * Lab ___
+  * Blurb about program...
+  */
+
+public class IntCounter{
+  private int[] numArray;
+  
+  public IntCounter(int[] x){
+    numArray = x;
+    for (int i: numArray){
+      System.out.print(i + " Array is of length " + numArray.length);
+    }
+  }
+  
+  public void showTarget(int target){
+    for (int i: numArray){
+      if (i == target){
+        System.out.println("There is a " + target + " in position " + i);
+      }
+    }
+  }
+}

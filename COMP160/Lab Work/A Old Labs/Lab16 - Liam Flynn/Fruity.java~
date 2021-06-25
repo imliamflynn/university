@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+/** Liam Flynn
+  * Lab ___
+  * Blurb about program...
+  */
+
+public class Fruity{
+  
+  public static void main(String[]args){
+    Scanner input = new Scanner(System.in);
+    String[] fruits = new String[3];
+    
+    for (int i = 0; i < fruits.length; i++){
+      System.out.println("Enter a fruit: ");
+      fruits[i] = input.nextLine();
+    }
+    
+    for(String i: fruits){
+      System.out.println("Guess what fruit I am? " + i.substring(0,2) + "\t" + i.length() + " letters");
+      String answer = input.nextLine();
+      if (answer == i){
+        System.out.println("Correct");
+      }
+      else{
+        System.out.println(answer + " " + i);
+      }
+    }
+  }
+}

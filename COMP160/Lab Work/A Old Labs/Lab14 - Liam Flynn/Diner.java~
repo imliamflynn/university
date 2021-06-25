@@ -1,0 +1,16 @@
+public class Diner{
+  int x;
+  int y;
+  String name;
+  int seatNum;
+  Color colour;
+  int DIAMETER final = 50;
+  
+  public Diner(int x, int y, String name, int seatNum){
+    
+  }
+  
+  public void draw(Graphics g){
+    
+  }
+}

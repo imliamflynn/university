@@ -1,0 +1,17 @@
+import java.awt.*; import java.awt.event.*; import javax.swing.*;
+
+/** Lab 18, TrafficLightPanel.java
+  * Liam Flynn, September 2020
+  * 
+  */
+
+public class TrafficLightPanel extends JPanel{
+  private JButton redButton, orangeButton, greenButton;
+  private JLabel lastPressedLabel;
+  private JPanel buttonPanel;
+  
+  public TrafficLightPanel(){
+    redButton = new JButton("Red");
+    
+  }
+}

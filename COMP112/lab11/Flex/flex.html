@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Flexbox Example </title>
+    <style>
+        body {
+            padding: 25px;
+
+        }
+
+        div {
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        main {
+            background-color: antiquewhite;
+            color: darkolivegreen;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href='http://www.otago.ac.nz'>Otago University</a> </li>
+            <li><a href='https://www.otago.ac.nz/computer-science/index.html'>Computer Science</a> </li>
+            <li><a href='http://www.cs.otago.ac.nz/comp112/'>COMP112 </a> </li>
+        </ul>
+    </nav>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </main>
+    <footer>
+        <p>Created by Nick Meek, October 2019</p>
+    </footer>
+
+</body></html>

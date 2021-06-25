@@ -1,0 +1,22 @@
+package shapes;
+import java.awt.*; import java.util.*;
+
+/** Lab 23, Smiley.java
+  * Liam Flynn, September 2020
+  * Uses random number generators to draw different smiley
+  */
+
+public class Smiley extends Shape{
+  public Smiley(){
+    width = 30;
+    height = 30;
+    Random generator = new Random();
+    y = generator.nextInt(max - height);
+  }
+  
+  /** When called, draws a smiley */
+  public void display(Graphics g){
+    g.setColor(colour);
+    g.fillOval(x, y, width, height);
+  }
+}

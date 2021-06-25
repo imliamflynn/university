@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Created by: Liam Flynn on 20 May 2020 -->
+
+<head>
+    <!-- Tasks:
+	1. Link a stylesheet for Print so that only the main content is printed.
+	2. Add @media rules to do the following:
+		a) When the page is 700px wide or less make the navigation disply stacked, see 700px.png
+		b) When the page is 900px wide or less don't show the asides and display two sections across, see 900px.png
+		c) For printing print only the h1 element and the main content.
+	-->
+    <meta charset="UTF-8">
+    <title> Question 2: A Responsive Page </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 50px;
+            margin: auto;
+            color: black;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        nav li {
+            width: 100px;
+            border: 1px solid;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+
+
+        #gridContainer {
+            display: grid;
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-rows: auto;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section {
+            border-radius: 10px;
+            width: 33%;
+            padding: 5px;
+            text-align: justify;
+            margin: 0;
+            background-color: azure;
+            color: inherit;
+        }
+
+        aside {
+            padding: 5px;
+            text-align: justify;
+        }
+
+        @media only screen and (max-width:900px) {
+            aside {
+                display: none;
+            }
+
+            #gridContainer {
+                display: flex;
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+
+            section {
+                margin: 0 15px;
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width:700px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="stylesheet" media="only print" href="Q2style.css">
+</head>
+
+<body>
+
+
+    <h1>A Responsive Web Page</h1>
+    <nav>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Specials</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="gridContainer">
+        <aside>
+            <p> Pellentesque nec vestibulum diam. Nulla tempor lacus et condimentum pellentesque. Nulla vulputate gravida tincidunt. Etiam hendrerit massa quis lectus venenatis, sed sollicitudin nibh vehicula. Aenean sem nulla, suscipit at porta et, vulputate eu purus. Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+            <p> Pellentesque nec vestibulum diam. Nulla tempor lacus et condimentum pellentesque. Nulla vulputate gravida tincidunt. Etiam hendrerit massa quis lectus venenatis, sed sollicitudin nibh vehicula. Aenean sem nulla, suscipit at porta et, vulputate eu purus. Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+
+        </aside>
+
+        <main>
+
+            <section>
+                <h2>Section Header</h2>
+                <p> Pellentesque nec vestibulum diam. Nulla tempor lacus et condimentum pellentesque. Nulla vulputate gravida tincidunt. Etiam hendrerit massa quis lectus venenatis, sed sollicitudin nibh vehicula. Aenean sem nulla, suscipit at porta et, vulputate eu purus. Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus ullamcorper mollis elit, id rutrum ipsum sodales eget. Quisque venenatis tellus diam, in rutrum dolor ultrices in. Praesent vehicula sapien enim, feugiat semper libero placerat eu. Mauris ull</p>
+
+            </section>
+            <section>
+                <h2>Section Header</h2>
+
+
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus ullamcorper mollis elit, id rutrum ipsum sodales eget. Quisque venenatis tellus diam, in rutrum dolor ultrices in. Praesent vehicula sapien enim, feugiat semper libero placerat eu. Mauris ull</p>
+
+            </section>
+            <section>
+                <h2>Section Header</h2>
+                <p> Pellentesque nec vestibulum diam. Nulla tempor lacus et condimentum pellentesque. Nulla vulputate gravida tincidunt. Etiam hendrerit massa quis lectus venenatis, sed sollicitudin nibh vehicula. Aenean sem nulla, suscipit at porta et, vulputate eu purus. Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+
+
+            </section>
+            <section>
+                <h2>Section Header</h2>
+
+
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus ullamcorper mollis elit, id rutrum ipsum sodales eget. Quisque venenatis tellus diam, in rutrum dolor ultrices in. Praesent vehicula sapien enim, feugiat semper libero placerat eu. Mauris ull</p>
+
+            </section>
+            <section>
+                <h2>Section Header</h2>
+                <p> Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+
+
+            </section>
+            <section>
+                <h2>Section Header</h2>
+                <p> Pellentesque nec vestibulum diam. Nulla tempor lacus et condimentum pellentesque. Nulla vulputate gravida tincidunt. Etiam hendrerit massa quis lectus venenatis, sed sollicitudin nibh vehicula. Aenean sem nulla, suscipit at porta et, vulputate eu purus. Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+
+
+            </section>
+
+
+        </main>
+        <aside>
+            <p> Pellentesque nec vestibulum diam. Nulla tempor lacus et condimentum pellentesque. Nulla vulputate gravida tincidunt. Etiam hendrerit massa quis lectus venenatis, sed sollicitudin nibh vehicula. Aenean sem nulla, suscipit at porta et, vulputate eu purus. Morbi non elit risus. Aliquam eleifend nunc sit amet tempus ultrices. Nam dolor diam, pulvinar sit amet elit eu, ultricies ultrices orci. Nulla in magna id libero bibendum vulputate. Vestibulum purus sem, finibus eu egestas quis, gravida ut nunc. Maecenas tempus nunc vel libero mattis, at feugiat odio rutrum. Etiam eget nibh augue. Etiam a est dapibus est pharetra rutrum. Vestibulum tempus vitae urna sit amet malesuada. Phasellus eu lacinia est. Integer id sapien efficitur, facilisis augue a, lacinia quam.</p>
+
+        </aside>
+    </div>
+    <footer>
+        <h2>Other Links</h2>
+        <ul>
+            <li><a href="">The Kennel Club</a></li>
+            <li><a href="">Dogz 'r' Us</a></li>
+            <li><a href="">Discount Dog Biscuits</a></li>
+        </ul>
+    </footer>
+
+</body></html>

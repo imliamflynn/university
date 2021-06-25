@@ -1,0 +1,19 @@
+/** Lab 9, CruiseApp.java
+  * Liam Flynn, August 2020
+  * 
+  */
+
+public class CruiseApp{
+  
+  public static void main(String[]args){
+    
+  }
+  
+  public static void confirmBooking(Customer customer){
+    
+  }
+  
+  public static void showBooked(Customer customer){
+    
+  }
+}

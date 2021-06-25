@@ -1,0 +1,15 @@
+public class TriangleApp{
+  public static void main(String[]args){
+    DecimalFormat fmt = new DecimalFormat();
+    
+    Triangle tri1 = new Triangle();
+    System.out.println("Name: " + tri1.getName() + ", Perimeter: " + tri1.getPerimeter());
+    
+    Triangle tri2 = new Triangle(0,3,3,4,1,9,"A");
+    System.out.println("Name: " + tri2.getName() + ", Perimeter: " + tri2.getPerimeter());
+    
+    Triangle tri3 = new Triangle(1,2,3,4,5,6,"B");
+    System.out.println("Name: " + tri3.getName() + ", Perimeter: " + tri3.getPerimeter());
+    
+  }
+}

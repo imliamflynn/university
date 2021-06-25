@@ -1,0 +1,16 @@
+public class SongApp{
+  
+  public static void main(String[]args){
+    Song songObj1 = new Song("While my guitar gently weeps"); //creates instance of Song
+    System.out.println(songObj1.toString());
+    songObj1.process();
+    System.out.println(" ");
+    Song songObj2 = new Song("Let it be");
+    System.out.println(songObj2.toString());
+    songObj2.process();
+    System.out.println(" ");
+    Song songObj3 = new Song("Penny Lane");
+    System.out.println(songObj3.toString());
+    songObj3.process();
+  }
+}

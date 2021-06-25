@@ -1,0 +1,26 @@
+package week09;
+
+/**Lab 9, May 4th.
+ * Selection sort.
+ * @author Liam Flynn.*/
+public class SelectionSort extends Sorter{
+    
+    /**Constructor fills array in super class.*/
+    public SelectionSort(Integer[]nums){
+        super(nums);
+    }
+
+    /**Does selection sort.*/
+    public void sortNums(){
+        for (i = 0; i < (nums.length - 1); i++){
+            for (j = i + 1; j < (nums.length); i++){
+                if (nums[j] < nums[i]){
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+                update();
+            }
+        }
+    }
+}

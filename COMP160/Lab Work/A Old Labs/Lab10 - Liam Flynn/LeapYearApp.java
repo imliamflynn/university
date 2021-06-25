@@ -1,0 +1,29 @@
+public class LeapYearApp{
+  
+  public static void main(String[]args){ //main
+    leapYear(2019);
+    leapYear(2020);
+    leapYear(1900);
+    leapYear(2000);
+    leapYear(1565);
+  }
+  public static void leapYear(int year){
+    if (year < 1582){
+      System.out.println(year + ": predates the Gregorian Calender.");} //less than 1582
+    else if (year % 4 != 0){
+      System.out.println(year + ": is not a leap year.");
+    } //not divisible by 4, 100 or 400
+    else if (year % 100 == 0){
+      if (year % 400 == 0){
+        System.out.println(year + ": is a leap year!");
+      } //divisible by 4, 100 and 400
+      else{
+        System.out.println(year + ": is not a leap year.");
+      }
+    } //divisible by 4 and 100,but not 400
+    else{
+      System.out.println(year + ": is a leap year!");
+    }
+  } //divisible by 4, but not 100 or 400
+  
+}

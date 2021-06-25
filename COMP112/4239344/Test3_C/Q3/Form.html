@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Created by: Liam Flynn on 20 May 2020 -->
+
+<head>
+    <title>Question 3: A Simple Form</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 700px;
+        }
+
+        figure {
+            text-align: center;
+            float: right;
+            border: solid black 1px;
+        }
+
+        section {
+            height: 350px;
+        }
+
+        form div {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Trevor's Tutoring</h1>
+        <figure>
+            <img src="Trevor.png" alt="Trevor the dog">
+            <figcaption>Let Trevor train your dog.</figcaption>
+        </figure>
+        <p>Trevor and his pack of highly trained helpers will soon have your pooch obedient and behaving like a star.</p>
+
+        <p>Whether your beloved fur baby hasn't mastered the basics of sit, stay and don't eat the sofa or needs more advanced training (to enter agility competitions for instance) Trevor has a programme ideally suited to you and your dog's needs.</p>
+
+        <p>Each dog is different and your dog will be assessed and a tailored program designed so that you will be able to take your dog anywhere and be assured they will behave beautifully.</p>
+    </section>
+
+    <div>
+        <p>*These fields are required</p>
+        <form method="post" enctype="application/x-www-form-urlencoded" action="http://www.cs.otago.ac.nz/112formslab.cgi">
+            <div>
+                <input type="hidden" name="recipient" value="lenli455@student.otago.ac.nz">
+                <input type="hidden" name="subject" value="Toyger Interest">
+                <input type="hidden" name="followup-page" value="http://www.cs.otago.ac.nz/comp112/followup.html">
+            </div>
+            <fieldset>
+                <legend>Your Details</legend>
+                <ul>
+                    <li class="textInputs">
+                        <input type="text" name="name" pattern="[a-zA-z '-]+"><label for="name">Your Name*</label>
+                    </li>
+                    <li class="textInputs">
+                        <input type="email" name="sender" id="sender"><label for="sender">Your Email</label>
+                    </li>
+                    <li class="textInputs">
+                        <input type="number" name="phoneNumber"><label for="phone">Your Phone</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dog Details</legend>
+                <ul>
+                    <li class="textInputs">
+                        <input type="text" name="dogName" pattern="[a-zA-z '-]+"><label for="dogName">Dogs Name*</label>
+                    </li>
+                    <li class="textInputs">
+                        <input type="number" name="age" pattern="[0-9 ()-]+"><label for="age">Dogs Age</label>
+                    </li>
+                    <li class="textInputs">
+                        <input type="text" name="breed" pattern="[a-zA-z '-]+"><label for="breed">Dogs Breed(Years/Months)</label>
+                    </li>
+                    <li class="textInputs">
+                        <input type="text" name="level"><label for="level">Level of Current Training</label>
+                    </li>
+                    <li class="textInputs">
+                        <input type="range" name="fight"><label for="fight">Does your dog fight with other dogs?</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <div>
+                <fieldset>
+                    <legend>Extras</legend>
+                    <p>Have you played underwater hockey before?</p>
+                    <ul>
+                        <li>
+                            <label><input type="checkbox" name="extras" value="colour">Training Colour</label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="extras" value="colour">Training Lead</label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="extras" value="colour">Training Treats</label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="extras" value="colour">Muzzle</label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="extras" value="colour">Coat</label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="extras" value="colour">Training Logbook</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Payment Options</legend>
+                    <ul>
+                        <li>
+                            <label><input type="radio" name="payment" value="cash" required>Cash</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+
+            <fieldset>
+                <legend>Form Controls</legend>
+                <input type="submit" value="Submit Query">
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,7 @@
+fname = input("Enter first name: ")
+lname = input("Enter last name: ")
+inst = input("Enter instituion name: ")
+title = input("Enter title: ")
+print(fname, lname)
+print(title)
+print(inst)

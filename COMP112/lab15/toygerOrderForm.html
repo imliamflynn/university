@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Toyger Request</title>
+</head>
+
+<body>
+    <p>
+        Please complete the form below to register your interest in purchasing a Toyger. We will be in touch with further details about the cats available.
+    </p>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="http://www.cs.otago.ac.nz/112formslab.cgi">
+        <div>
+            <input type="hidden" name="recipient" value="lenli455@student.otago.ac.nz">
+            <input type="hidden" name="subject" value="Toyger Interest">
+            <input type="hidden" name="followup-page" value="http://www.cs.otago.ac.nz/comp112/followup.html">
+        </div>
+        <fieldset class="textInputs">
+            <legend>Contact Details</legend>
+            <ul>
+                <li>
+                    <label for="firstname">Firstname:</label><input type="text" name="firstName" id="firstname" title="Your first name and any middle names" tabindex="1" required pattern="[a-zA-z '-]+" placeholder="Please enter your first name">
+                </li>
+                <li>
+                    <label for="surname">Surname:</label><input type="text" name="surname" id="surname" required pattern="[a-zA-z '-]+" placeholder="Please enter your surname">
+                </li>
+                <li>
+                    <label for="sender">Email address:</label><input type="email" name="sender" id="sender" required placeholder="Please enter your email address">
+                </li>
+                <li>
+                    <label for="phone">Phone number:</label><input type="tel" name="phoneNumber" id="phone" required pattern="[0-9 ()-]+" placeholder="Please enter your phone number">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact you Via</legend>
+            <ul class="float">
+                <li>
+                    <label><input type="radio" name="contactpreference" id="emailcontact" value="email" required>Email</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="contactpreference" value="phone" id="phonecontact" required>Phone</label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Requirements for Your Toyger</legend>
+            <ul class="float">
+                <li>
+                    <label><input type="checkbox" name="interestedin" id="kitten" value="kitten">Kitten</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="interestedin" id="cat" value="cat">Mature</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="interestedin" id="pet" value="pet">Pet</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="interestedin" id="show" value="show">Show</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="interestedin" id="queen" value="queen/stud">Queen</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="interestedin" id="stud" value="stud">Stud</label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Comments</legend>
+            <div>
+                <textarea cols="40" rows="4" id="comments">Add your comments here</textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <input type="reset" name="reset">
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+
+    <figure>
+        <img src="toyger.jpg" alt="A toyger">
+    </figure>
+
+    <p>Thank you!</p>
+</body></html>
