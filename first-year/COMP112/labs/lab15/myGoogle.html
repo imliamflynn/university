@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Google</title>
+    <style>
+        img {
+            vertical-align: middle;
+        }
+
+        form {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="http://www.google.co.nz/search">
+        <p>
+            My own <img src="http://www.google.com/logos/Logo_40wht.gif" alt="Google Logo."> search site
+        </p>
+
+        <p>
+            <input type="text" name="q" size="50" maxlength="255" value="">
+        </p>
+
+        <p>
+            HTML <input type="checkbox" name="q" value="html">
+            Web Design <input type="checkbox" name="q" value="web design">
+        </p>
+
+        <p>
+            <select name="q" size="1">
+                <option>Resources</option>
+                <option>Free</option>
+                <option>Tutorial</option>
+            </select>
+        </p>
+
+        <p>
+            Please add any additional search terms here:<br> <textarea cols="50" name="q" rows="2"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Search">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body></html>

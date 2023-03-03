@@ -1,0 +1,5 @@
+1. The main difference is that selection sort is slower for most of the
+tests. I would use insertion sort for larger sets of data that is ordered
+randomly, and I would use selection sort for smaller sets of data.
+
+2. If we increased the maximum number of items, selection sort would blow selection sort out of the water.

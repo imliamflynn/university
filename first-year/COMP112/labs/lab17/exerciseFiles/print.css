@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    position: absolute;
+    left: -999px;
+}
+
+.col-4 {
+    position: absolute;
+    top: -9999px;
+}

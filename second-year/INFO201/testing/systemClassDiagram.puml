@@ -1,0 +1,62 @@
+@startuml
+
+' ======= Style / Layout Tweaks =======
+
+hide empty members
+
+skinparam {
+  Style StrictUML
+  Padding 2
+  RoundCorner 5
+  ClassAttributeIconSize 0
+  ClassStereotypeFont {
+    Size 10
+    Style plain
+  }
+  RankSep 100
+  NodeSep 170
+}
+
+' ======= Classes =======
+
+class "MainMenu" as menu <<form>> {
+ -btnEnrolStudent : JButton
+ -btnEnrolStudentInDegree : JButton
+ -btnEnrolStudentInClasses : JButton
+ -btnExit : JButton
+}
+
+class "EnrolStudentInDegree" as enrol <<form>> {
+  - txtStudentID : JTextField
+  - cmbDegreeName  : JComboBox
+  - radGrpPaymentReceived  : ButtonGroup
+  - cmbStatus : JComboBox
+  - btnFindStudent : JButton
+  - btnSave : JButton
+  - btnCancel : JButton
+--
+  + displayForm() : void
+  + populateDegreeNames(degreeNames : Collection<String>) : void
+  + populateStatuses(statuses : Collection<String>) : void
+}
+
+class "EnrolmentDataStore" as enromentdata <<data store>> {
+--
+  + getDegreeNames() : Collection<String>
+  + getDegreeEnrolmentStatuses() : Collection<String>
+  + findStudent(studentID : String) : Student
+  + enrolStudentInDegree(student: Student, degree: DegreeEnrolment) : void
+  + saveEnrolment(enrolment : Enrolment) : void
+}
+
+class "Student" as student <<domain>>
+class "DegreeEnrolment" as degreeEnrolment <<domain>>
+
+' ======= Relationships =======
+
+menu -> "- enrolInDegreeForm\r1" enrol
+enrol --> "- student\r1" student
+enrol --> "- dataStore\r1" enromentdata
+enrol --> "- enrolment      \r1     " degreeEnrolment
+
+@enduml

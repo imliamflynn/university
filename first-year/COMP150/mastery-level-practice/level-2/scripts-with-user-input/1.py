@@ -1,0 +1,5 @@
+x = input ("Enter the first number: ")
+y = input ("Enter the second number: ")
+z = input ("Enter the third number: ")
+total = str(int(x) + int(y) + int(z))
+print ("The sum is: " + total)

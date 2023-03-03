@@ -1,0 +1,66 @@
+@startuml
+
+' ======= Style / Layout Tweaks =======
+
+skinparam {
+  Style StrictUML
+  SequenceStereotype {
+    Font {
+      Size 10
+      Style plain
+    }
+  }
+}
+
+' ======= Participants =======
+
+actor "User" as user
+participant ":MainMenu" as menu <<form>>
+participant "enrolInDegreeForm\n:EnrolStudentInDegree" as degreeForm <<form>>
+participant "dataStore\n:EnrolmentDataStore" as dataStore <<data store>>
+participant "student\n:Student" as student <<domain>>
+participant "enrolment\n:DegreeEnrolment" as enrolment <<domain>>
+
+' ======= Messages =======
+
+user -> menu : click "Enrol Student in Degree"
+menu++
+
+menu -> degreeForm : displayForm()
+degreeForm++
+
+degreeForm -> dataStore : getDegreeNames()
+dataStore++
+return names
+degreeForm -> degreeForm : populateDegreeNames(names)
+
+degreeForm -> dataStore : getDegreeEnrolmentStatuses()
+dataStore++
+return statuses
+
+degreeForm -> degreeForm : populateStatuses(statuses)
+
+user -> degreeForm : enter student ID
+user -> degreeForm : click "Find Student"
+
+degreeForm -> dataStore : findStudent(studentId)
+dataStore++
+create student
+dataStore -> student : <<construct from\ndatabase>>
+return student
+
+user -> degreeForm : enter enrolment details
+
+user -> degreeForm : click "Save"
+
+create enrolment
+degreeForm -> enrolment : <<construct from form data>>
+degreeForm -> dataStore : enrolStudentInDegree(student, enrolment)
+dataStore++
+deactivate dataStore
+degreeForm -> dataStore : saveEnrolment(enrolment)
+dataStore++
+deactivate dataStore
+return
+destroy degreeForm
+@enduml

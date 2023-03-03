@@ -1,0 +1,18 @@
+1. ^
+2. FileInputStream is meant for reading streams of raw bytes such as image data.
+   For reading streams of characters, consider using FileReader.
+3. FileInputStream f = new FileInputStream(file);
+4. read(), returns the next byte of data, or -1 if the end of the file is reached
+5. FileOutputStream is meant for writing streams of raw bytes such as image data.
+   For writing streams of characters, consider using FileWriter.
+6. FileOutputStream f = new FileOutputStream(file);
+7. Public void write(int b);
+8. close()
+9. public class Arguments{
+	    public static void main(String[] args{
+            String s = args[0];
+            for (int i = 0; i < Integer.parseInt(args[1]); i++){
+                System.out.println(s);
+            }
+	    }
+    }

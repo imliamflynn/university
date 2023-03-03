@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Liam Lennon-Flynn - May 2020 -->
+
+<head>
+    <meta charset="utf-8">
+    <title>The Mosgiel Underwater Hockey Club: Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway&display=swap">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/sticks.jpg" alt="Mosgiel Underwater Hockey Club Logo"></a>
+
+        <h1>Welcome To<br>The Mosgiel Underwater Hockey Club</h1>
+
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="league.html">League</a></li>
+                <li><a href="ethics.html">Ethics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Playing Times and Venue</h2>
+            <dl>
+                <dt>Venue:</dt>
+                <dd>Mosgiel Pool</dd>
+                <dt>Times:</dt>
+                <dd>Thursday: 8pm-10pm</dd>
+                <dd>Sunday 5:30pm - 7pm (schools / beginners 4:30pm - 5:30pm)</dd>
+            </dl>
+            <p>New players always welcome, just come along and give it a go! If you don't have any gear don't worry, we can lend you some.
+            </p>
+        </section>
+
+        <section>
+            <h2>News</h2>
+            <section>
+                <h3>Mosgiel Women's Team takes Gold at Nationals</h3>
+                <p>A superb effort from the Women's team saw them crush all comers in a dominant display that genuinely scared some of their opponents. Congratulations to all involved.
+                </p>
+            </section>
+            <section>
+                <h3>Sam Puckchucker to Captain Under 21s</h3>
+                <p>Well-liked club member Sam has been chosen to captain the Under 21 team on its upcoming tip to France.
+                </p>
+            </section>
+            <section>
+                <h3>Club Subscriptions are now Due.</h3>
+                <p>If you haven't already paid do it today. John says that if they aren't paid by the end of the week then you will have to pay an extra $10.
+                </p>
+            </section>
+            <div>
+                <img src="images/hockey1.jpg" alt="A group of people playing underwater hockey">
+                <img src="images/images.jpg" alt="Someone emerging from the water with a stick and puck in hands">
+                <img src="images/twoPlayers.jpg" alt="Two people battling for the puck underwater">
+            </div>
+        </section>
+
+        <section>
+            <h2>Sign Up Form</h2>
+            <form method="post" enctype="application/x-www-form-urlencoded" action="http://www.cs.otago.ac.nz/112formslab.cgi">
+                <div>
+                    <input type="hidden" name="recipient" value="lenli455@student.otago.ac.nz">
+                    <input type="hidden" name="subject" value="Toyger Interest">
+                    <input type="hidden" name="followup-page" value="http://www.cs.otago.ac.nz/comp112/followup.html">
+                </div>
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <ul>
+                        <li class="textInputs">
+                            <label for="firstname">Firstname:</label><input type="text" name="firstName" title="Your first name and any middle names" pattern="[a-zA-z '-]+" placeholder="Please enter your first name" required>
+                        </li>
+                        <li class="textInputs">
+                            <label for="surname">Surname:</label><input type="text" name="surname" pattern="[a-zA-z '-]+" placeholder="Please enter your surname" required>
+                        </li>
+                        <li class="textInputs">
+                            <label for="sender">Email Address:</label><input type="email" name="sender" id="sender" placeholder="Please enter your email address" required>
+                        </li>
+                        <li class="textInputs">
+                            <label for="phone">Phone Number:</label><input type="tel" name="phoneNumber" pattern="[0-9 ()-]+" placeholder="Please enter your phone number" required>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How Should We You Contact You?</legend>
+                    <ul>
+                        <li class="float">
+                            <label><input type="radio" name="contactpreference" value="email" required>Email</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="contactpreference" value="phone" class="moveR" required>Phone</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Important Details</legend>
+                    <p>Have you played underwater hockey before?</p>
+                    <ul>
+                        <li class="float">
+                            <label><input type="radio" name="experienced" value="Yes" required>Yes</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="experienced" value="No" class="moveR" required>No</label>
+                        </li>
+                    </ul>
+                    <p>What is your date of birth?</p>
+                    <ul>
+                        <li>
+                            <input type="date" name="dob">
+                        </li>
+                    </ul>
+                    <p>What is your gender?</p>
+                    <ul>
+                        <li class="float">
+                            <label><input type="radio" name="gender" value="Male" required>Male</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="gender" value="Female" class="moveR" required>Female</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <input type="submit" value="Submit Form">
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about the MUWHC please contact us at:</p>
+            <address>
+                <p>
+                    enquiries@mosgielhockey.co.nz<br>
+                    123 Gordon Road<br>
+                    Mosgiel<br>
+                </p>
+            </address>
+        </section>
+    </main>
+    <footer>
+        <p>This site was created as part of a <a href="http://otago.ac.nz">University</a> project and is entirely fictitious
+        </p>
+    </footer>
+</body></html>

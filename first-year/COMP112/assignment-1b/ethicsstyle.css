@@ -1,0 +1,91 @@
+html {
+    color: black;
+    background-color: blue;
+}
+
+body {
+    width: 1000px;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    color: inherit;
+    background-color: white;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    border: solid black 1px;
+    border-radius: 20px;
+    height: 125px;
+}
+
+img {
+    width: 125px;
+    height: 125px;
+    float: left;
+    margin: 0 40px 0 0;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    float: left;
+}
+
+h2 {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    color: inherit;
+    background-color: white;
+    margin: 25px 0 0 0;
+    padding: 20px;
+    border: solid black 1px;
+    border-radius: 20px;
+}
+
+nav {
+    position: relative;
+    top: -15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header li {
+    margin: 0 0 0 5px;
+    padding: 5px 15px 5px 15px;
+    list-style: none;
+    border: dotted black 1px;
+    text-align: center;
+}
+
+header a {
+    color: black;
+    background-color: inherit;
+}
+
+p {
+    text-align: justify;
+    margin-top: 16px;
+}
+
+main {
+    display: flex;
+}
+
+section:first-child {
+    height: 430px;
+}
+
+section + section {
+    margin-left: 5px;
+}

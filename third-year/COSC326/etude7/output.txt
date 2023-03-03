@@ -1,0 +1,294 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-180.000000, 90.000000]
+      },
+      "properties": {
+          "name": "Dunedin1"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [180.000000, -90.000000]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [180.0, -90.000000]
+      },
+      "properties": {
+          "name": "Dunedin2"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-180.0, 90.000000]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-180.0, 90.0]
+      },
+      "properties": {
+          "name": "Dunedin3"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [180.0, -90.0]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [180.0, 90.0]
+      },
+      "properties": {
+          "name": "Dunedin4"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-180.0, -90.0]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-180.000000, 90.000000]
+      },
+      "properties": {
+          "name": "Dunedin5"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [180.000000, -90.000000]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-180.0, -90.000000]
+      },
+      "properties": {
+          "name": "Dunedin6"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [180.0, 90.000000]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-70.7, -45.3]
+      },
+      "properties": {
+          "name": "Dunedin7"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [70.7, 45.3]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-70.7, 45.3]
+      },
+      "properties": {
+          "name": "Dunedin8"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [70.7, -45.3]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": "Dunedin9"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": "Dunedin10"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-32.306416666666664, -32.306416666666664]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": "Dunedin11"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": "Dunedin12"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-32.306416666666664, -32.306416666666664]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": "Dunedin13"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [32.306416666666664, 32.306416666666664]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-32.306416666666664, -32.306416666666664]
+      },
+      "properties": {
+          "name": "Dunedin14"
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-32.306416666666664, -32.306416666666664]
+      },
+      "properties": {
+          "name": ""
+      }
+   },
+{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [170.51780555555558, -45.867111111111114]
+      },
+      "properties": {
+          "name": "OwheoTwo"
+      }
+   }]
+}
