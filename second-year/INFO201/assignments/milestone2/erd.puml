@@ -1,0 +1,78 @@
+@startuml
+
+entity Sale{
+*Sale_ID
+*Customer_ID
+*Product_ID
+*Transaction_ID
+--
+*Date
+*Time
+*Address
+*Payment Details
+Gift Wrapped
+}
+entity Customer{
+*Customer_ID
+--
+*Name
+*Phone Number
+*Email Address
+*Over 18
+*Country of Residence
+Date of Birth
+Music Taste
+Favourite Artists
+}
+entity Transaction{
+*Transaction_ID
+*Invoice_ID
+--
+*Amount
+*Date
+*Time
+*Payment Type
+}
+entity Product{
+*Product_ID
+--
+*Product Name
+*Price
+*Product Info
+}
+entity StaffPicks{
+*StaffPicks_ID
+*Staff_ID
+*Product_ID
+*Date
+--
+*Music Taste
+}
+entity Staff{
+*Staff_ID
+--
+*Name
+*Phone Number
+*Email Address
+*Music Taste
+}
+entity Invoice{
+*Invoice_ID
+--
+*Price
+*Name
+*Date
+*Time
+*Address
+*Phone
+*Email Address
+}
+
+Sale }o-left-|| Customer
+Sale ||-down-|| Transaction
+Sale ||-right-|{ Product
+Staff ||-up-o{ StaffPicks
+Transaction ||-down-|| Invoice
+Product ||.down.o{ StaffPicks
+
+@enduml

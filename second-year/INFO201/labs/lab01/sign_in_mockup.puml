@@ -1,0 +1,10 @@
+@startuml Sign In
+
+salt
+{+
+  Username:    | "jane   "
+  Password: | "****   "
+  [Cancel] | [  OK   ]
+}
+
+@enduml

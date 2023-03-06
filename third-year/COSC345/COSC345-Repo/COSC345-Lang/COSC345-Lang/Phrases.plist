@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New item</key>
+	<array>
+		<string>Where are you from?</string>
+		<string>D&apos;où viens-tu?</string>
+		<string>¿De dónde eres?</string>
+		<string>No hea koe?</string>
+	</array>
+	<key>New item - 2</key>
+	<array>
+		<string>What do you do?</string>
+		<string>Que fais-tu?</string>
+		<string>¿A qué te dedicas?</string>
+		<string>He aha to nama waea?</string>
+	</array>
+	<key>New item - 3</key>
+	<array>
+		<string>What is your phone number?</string>
+		<string>Quel est votre numéro de téléphone?</string>
+		<string>¿Cuál es tu número de teléfono?</string>
+		<string>He aha to nama waea?</string>
+	</array>
+	<key>New item - 4</key>
+	<array>
+		<string>Nice to meet you</string>
+		<string>Ravi de vous rencontrer</string>
+		<string>Encantado de conocerte</string>
+		<string>He pai ki te tutaki ki a koe</string>
+	</array>
+	<key>New item - 5</key>
+	<array>
+		<string>Thank you, that helps alot</string>
+		<string>Merci, ça m&apos;aide beaucoup</string>
+		<string>Gracias, eso ayuda mucho</string>
+		<string>Mauruuru koe, he awhina nui tena</string>
+	</array>
+	<key>New item - 6</key>
+	<array>
+		<string>How does this sound?</string>
+		<string>Comment cela sonne-t-il ?</string>
+		<string>¿Como suena esto?</string>
+		<string>He pehea te tangi o tenei?</string>
+	</array>
+	<key>New item - 7</key>
+	<array>
+		<string>I do not understand</string>
+		<string>Je ne comprends pas</string>
+		<string>No entiendo</string>
+		<string>Kaore au i te marama</string>
+	</array>
+	<key>New item - 8</key>
+	<array>
+		<string>Could you repeat that, please?</string>
+		<string>Pourriez-vous répéter cela, s&apos;il vous plait?</string>
+		<string>¿Podrías repetir eso por favor?</string>
+		<string>Ka taea e koe te whakahoki ano, koa?</string>
+	</array>
+	<key>New item - 9</key>
+	<array>
+		<string>How do you spell that?</string>
+		<string>Comment épelez-vous cela?</string>
+		<string>¿Cómo se deletrea eso?</string>
+		<string>Me pehea e tuhi ai koe i tera?</string>
+	</array>
+	<key>New item - 10</key>
+	<array>
+		<string>What do you mean?</string>
+		<string>Que veux-tu dire?</string>
+		<string>¿Qué quieres decir?</string>
+		<string>He aha to tikanga?</string>
+	</array>
+	<key>New item - 11</key>
+	<array>
+		<string>Can you help me?</string>
+		<string>Pouvez-vous m&apos;aider?</string>
+		<string>¿Me puedes ayudar?</string>
+		<string>Ka taea e koe te awhina i ahau?</string>
+	</array>
+	<key>New item - 12</key>
+	<array>
+		<string>I do not know my size</string>
+		<string>Je ne connais pas ma taille</string>
+		<string>No se mi talla</string>
+		<string>Kaore au e mohio ki taku rahi</string>
+	</array>
+	<key>New item - 13</key>
+	<array>
+		<string>How much does that cost?</string>
+		<string>Combien ça coûte?</string>
+		<string>¿Cuánto cuesta eso?</string>
+		<string>E hia te utu?</string>
+	</array>
+	<key>New item - 14</key>
+	<array>
+		<string>I do not need a bag</string>
+		<string>Je n&apos;ai pas besoin de sac</string>
+		<string>No necesito una bolsa</string>
+		<string>Kaore au e hiahia putea</string>
+	</array>
+	<key>New item - 15</key>
+	<array>
+		<string>Can someone help me carry this?</string>
+		<string>Quelqu&apos;un peut-il m&apos;aider à le porter ?</string>
+		<string>¿Alguien puede ayudarme a llevar esto?</string>
+		<string>Ka taea e tetahi te awhina i ahau ki te kawe i tenei?</string>
+	</array>
+	<key>New item - 16</key>
+	<array>
+		<string>What time is our meeting?</string>
+		<string>A quelle heure est notre rendez-vous ?</string>
+		<string>¿A qué hora es nuestra reunión?</string>
+		<string>He aha ta tatou hui?</string>
+	</array>
+	<key>New item - 17</key>
+	<array>
+		<string>What is this?</string>
+		<string>Qu&apos;est-ce que c&apos;est?</string>
+		<string>¿Qué es esto?</string>
+		<string>He aha tenei?</string>
+	</array>
+	<key>New item - 18</key>
+	<array>
+		<string>What time is it?</string>
+		<string>Quelle heure est-il?</string>
+		<string>¿Qué hora es?</string>
+		<string>He aha te taima?</string>
+	</array>
+</dict>
+</plist>

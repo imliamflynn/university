@@ -1,0 +1,35 @@
+@startuml producing-book-diagram
+
+skinparam guillemet false
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam style strictuml
+skinparam classArrowFontSize 10
+skinparam classFontStyle bold
+skinparam SwimlaneBorderThickness 0
+
+
+skinparam activity {
+  hide empty description
+}
+
+|\t|
+start
+repeat
+:Write chapter;
+|\n|
+:Review chapter;
+|\t|
+:Revise chapter;
+repeat while(Book complete?) is (\t[book incomplete])
+->[book complete];
+  |\l|
+  :Typeset book;
+  |\t|
+  :Correct proofs;
+  |\l|
+  :Reset book;
+  :Print book;
+stop
+
+@enduml

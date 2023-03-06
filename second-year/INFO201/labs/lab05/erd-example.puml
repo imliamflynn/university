@@ -1,0 +1,41 @@
+@startuml
+
+skinparam Style StrictUML
+skinparam LineType ortho
+skinparam monochrome true
+
+class Customer {
+    * Customer_ID
+--
+    * Family_Name
+    * Given_Names
+    * Birth_Date
+    Email
+}
+
+class Car {
+    * VIN
+--
+    * Licence_Plate
+    * Make
+    * Model
+    * Year
+    * Last_Odometer
+    * Last_Odometer_Date
+    Condition
+}
+
+class Hire {
+    * VIN
+    * Customer_ID
+    * Start_Date
+--
+    End_Date
+    Notes
+    * Balance
+}
+
+Customer ||-o{ Hire
+Hire }o-|| Car
+
+@enduml

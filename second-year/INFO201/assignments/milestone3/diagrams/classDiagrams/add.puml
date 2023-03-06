@@ -1,0 +1,47 @@
+@startuml
+
+skinparam {
+  Style StrictUML	
+  RoundCorner 5
+  Padding 2
+  ClassAttributeIconSize 0
+  RankSep 80
+  NodeSep 100
+}
+
+class "SaleItem" as sal{
+- saleID : Integer
+- storeID : Integer
+- isrc : String
+- format : String
+- condition : String
+- salePrice : Integer
+- quantity : Integer
+}
+
+class "Inventory" as inv {
+- storeID : Integer
+- isrc : String
+- format : String
+- condition : String
+- unitPrice : Integer
+- stockQuantity : Integer
+}
+
+class "Recording" as rec {
+- isrc : String
+- artist : String
+- title : String
+- titleSort : String
+- year : Integer
+- releaseDate : String
+- genre : String
+- duration : String
+- producer : String
+- notes : String
+}
+
+sal -> "- inventory\r1..1" inv
+inv -> "- recording\r0..*" rec
+
+@enduml

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Edit | Examiner Finder</title>
+        <link rel="stylesheet" href="/style.css" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        
+
+        
+    </head>
+    <body>
+        <div class='header'>
+            <div>
+                <p th:if="${userFirstName == null}"></p>
+                <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+            </div>
+            
+            <h1>Edit Examiner</h1>      
+        </div>
+
+        <div th:replace="/navigator :: navbar"></div>
+
+        <form method="post" th:action="@{/editExaminer/{examinerID}(examinerID=${examiner.examinerID})}" th:object="${examiner}">
+            <div>
+                <input id="firstName" required type="text" placeholder="Enter First Name" th:field="${examiner.firstName}"/>
+                <input id="lastName" required type="text" placeholder="Enter Last Name" th:field="${examiner.lastName}"/>
+                <input id="email" required type="text" placeholder="Enter Email" th:field="${examiner.email}"/>
+                <input id="location" required type="text" placeholder="Enter Location" th:field="${examiner.location}"/>
+                <input id="university" required type="text" placeholder="Enter University" th:field="${examiner.university}"/>
+                <input id="department" required type="text" placeholder="Enter Department" th:field="${examiner.department}"/>
+                <input id="topics" required type="text" placeholder="Enter Topic" th:field="${examiner.topic}"/>
+            </div>
+            <div>
+                <input type="submit" value="Update User">
+            </div>
+        </form>
+        
+        
+            <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.linkedin.com/school/university-of-otago/"><i class="icon ion-social-linkedin"></i></a><a href="https://www.facebook.com/otagouniversity/"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/graduate-research/study/phddoctoral/programme/">About</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/tools/privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">University of Otago © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

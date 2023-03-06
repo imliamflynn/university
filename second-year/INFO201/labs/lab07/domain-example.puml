@@ -1,0 +1,58 @@
+@startuml
+
+' ======= Style / Layout Tweaks =======
+
+skinparam {
+  ' use conventional UML notation
+  Style StrictUML
+
+  ' use + and - characters instead of icons for showing visibility
+  ClassAttributeIconSize 0
+
+  ' less pointer corners
+  RoundCorner 5
+
+  ' make everything slightly less cramped
+  Padding 2
+
+  ' increase vertical spacing to make room for labels
+  RankSep 100
+
+  ' increase horizontal spacing to make room for labels
+  NodeSep 100
+
+  Defaultfontsize 14
+  Classfontsize 16
+}
+
+' ======= Classes =======
+
+class "Owner" as owner {
+  ' fields
+  - id
+  - name
+  - phoneNumber
+  - mailingAddress
+--
+  ' methods
+  + addPet(pet : Pet)
+  + removePet(pet : Pet)
+}
+
+class "Pet" as pet {
+  ' fields
+  - name
+  - sex
+  - species
+  - breed
+  - dateOfBirth
+--
+  'methods
+}
+
+' ======= Relationships =======
+
+' Note: the \r is a right-aligned line break (\l is left-aligned, and \n is centred)
+owner -> "- pets\r0..*" pet
+
+@enduml

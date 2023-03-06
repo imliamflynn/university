@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5e0c836b-4d7d-4d1a-86e3-b3f44e9d5a6c" name="Assignment2" url="localhost:8888">
+        <fileTransfer rootFolder="/devel/llennonflynn/projects/assignments" accessType="SFTP" host="localhost" port="8887" sshConfigId="08032e83-59e7-4158-883d-cc99ab567ddd" sshConfig="llennonflynn@localhost:8887 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

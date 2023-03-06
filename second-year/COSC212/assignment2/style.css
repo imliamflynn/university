@@ -1,0 +1,84 @@
+/**
+* Liam Flynn 2021
+* COSC212
+ */
+html{
+    font-family: Helvetica;
+    background-color: #3388ff;
+}
+body{
+    width:1000px;
+    margin:0 auto;
+    color: black;
+    background-color: #ffee00;
+    padding: 20px;
+    padding-top: 5px;
+}
+main{
+    background-color: white;
+}
+
+#bookingData{
+    display: flex;
+}
+
+nav ul{
+    list-style-type: none;
+    display:flex;
+    margin:auto;
+}
+
+nav li{
+    flex:1;
+    text-align: center;
+    width:100px;
+}
+
+
+li {
+    margin-top: 10px;
+}
+
+
+#siteList {
+    flex:1;
+    background-color: #ff1a1a;
+}
+
+#dogPreviewPane{
+    flex:1;
+    background-color: #00e600;
+}
+
+#dogPreviewPane img {
+    width: 100%;
+}
+
+#selectDates {
+    flex:1;
+    background-color: #ff9900;
+}
+
+#selectDates label {
+    display: block;
+}
+
+#map {
+    clear: left;
+    height: 800px;
+    background-color: cornsilk;
+}
+
+#dateErrors {
+    min-height: 70px;
+}
+
+#reviews {
+    background-color: ivory;
+    color: inherit;
+    padding:5px;
+}
+
+#reviews dd{
+    margin-bottom:20px;
+}

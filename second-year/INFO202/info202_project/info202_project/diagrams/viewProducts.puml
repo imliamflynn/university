@@ -1,0 +1,26 @@
+A sequence diagram for the ‘view all products’ use case. It should 
+show the flow of interactions from the user clicking the button on 
+the menu, through to the dialog being displayed, and the products 
+being loaded into the list.
+
+@startuml
+skinparam style strictuml
+
+actor "User" as user
+participant "MainMenu" as menu <<GUI>>
+participant "ProductViewer" as viewer <<form>>
+participant "ProductCollectionsDAO" as proDAO <<DAO>>
+participant "SimpleListModel" as list <<model>>
+
+user -> menu++ : click "View Product"
+menu -> viewer++ : run()
+
+viewer -> proDAO++ : getProducts()
+return Collection<Product> products
+proDAO--
+
+viewer -> list : updateItems(products)
+viewer -> list : setModel(productsModel)
+
+destroy viewer
+@enduml

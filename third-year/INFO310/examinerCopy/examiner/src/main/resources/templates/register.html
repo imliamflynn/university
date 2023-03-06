@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register | Examiner Finder</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <div class='header'>
+
+            <div class='hideTopBanner'>
+                <p class='sessionUserBlurb' th:if="${userFirstName == null}"></p>
+                <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+            </div>
+
+            <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+
+            <h1>Create an Account</h1>      
+        </div>
+
+
+        <div class='registerBox'>
+            <h2 class='registerTitle'>Enter your details below to create an account</h2>
+            <form method="post" th:action="@{/registerPost}" th:object="${registerRequest}" class='formStyle1'>
+                <fieldset>
+                    
+                    <label>Username:</label>
+                    <input name="username" type="text" placeholder="Username" required /><br><br> <!--th:field="${registerRequest.username}"-->
+                    <label>Password:</label>
+                    <input name="password" type="password" placeholder="Password" required /><br><br> <!--th:field="${registerRequest.password}"-->
+                    
+                </fieldset>
+                <div>
+                    <input type="submit" value="Create Account" class='button registerButton'>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

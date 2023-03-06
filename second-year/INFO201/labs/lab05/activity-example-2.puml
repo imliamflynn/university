@@ -1,0 +1,30 @@
+@startuml forkjoin-example
+
+skinparam guillemet false
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam style strictuml
+
+skinparam activity {
+  hide empty description
+}
+
+start
+:Verify reservation;
+if (Reservation correct?) then ([yes])
+  :Get preferences;
+  fork
+  if (Have baggage?) then ([yes])
+   :Receive baggage and print receipt;
+   else (\t[no])
+   endif 
+   fork again
+    :Print boarding pass;
+   end fork
+   else (\t[no])
+   :Send to airport travel agency;
+   stop
+   endif
+   :Give travel documents to passenger;
+   stop
+@enduml

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="InvoiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-05-16T04:01:03" hostname="Liams-Air-2.student.uod.otago.ac.nz" time="0.057">
+  <properties/>
+  <testcase name="testGetTotal()" classname="InvoiceTest" time="0.044"/>
+  <testcase name="testAddItem()" classname="InvoiceTest" time="0.006"/>
+  <testcase name="testRemoveItem()" classname="InvoiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

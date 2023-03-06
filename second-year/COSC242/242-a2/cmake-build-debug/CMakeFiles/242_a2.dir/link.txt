@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/242_a2.dir/asgn/asgn2.c.o CMakeFiles/242_a2.dir/asgn/mylib.c.o CMakeFiles/242_a2.dir/asgn/tree.c.o -o 242_a2  -lm 

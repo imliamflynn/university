@@ -1,0 +1,28 @@
+@startuml
+
+left to right direction
+
+actor Customer as cust
+actor Staff as staff
+
+rectangle Sale{
+    usecase (Check Out Cart) as check
+    usecase (Gift-Wrap Items) as gift
+    usecase (Ship Purchased Items) as ship
+    rectangle Register{
+        usecase (Register Customer) as reg
+        usecase (Add Personal\nInformation) as add
+    }
+}
+
+cust -- check
+cust -- reg
+gift -- staff
+ship -- staff
+reg .> add :<<require>>
+check .> reg :<<require>>
+check <.. gift :<<extend>>
+check ..> ship :<<require>>
+
+
+@enduml

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>My Committee | Examiner Finder</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,500;0,700;1,100;1,500;1,700&family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class='header'>
+
+            <div>
+                <p class='sessionUserBlurb' th:if="${userFirstName == null}">Please log in</p>
+                <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+            </div>
+
+            <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+
+             <h1>Your Committee Examiners</h1>
+        </div>
+
+        <div th:replace="/navigator :: navbar"></div>
+
+        <div th:switch="${committeeExaminers}">
+            <h2 th:case="null">No examiners in your committee yet.</h2>
+            <div th:case="*">
+                <h2>Examiners</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Location</th>
+                            <th>University</th>
+                            <th>Department</th>
+                            <th>Topics</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="examiner : ${committeeExaminers}">
+                            <td th:text="${examiner.examinerID}"></td>
+                            <td th:text="${examiner.firstName}"></td>
+                            <td th:text="${examiner.lastName}"></td>
+                            <td th:text="${examiner.email}"></td>
+                            <td th:text="${examiner.location}"></td>
+                            <td th:text="${examiner.university}"></td>
+                            <td th:text="${examiner.department}"></td>
+                            <td th:text="${examiner.topic}"></td>
+                            <td><a th:href="@{/deleteCommitteeExaminer/{examinerID}/(examinerID=${examiner.examinerID})}">Remove From Committee?</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

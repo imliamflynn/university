@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doohickies and Widgets</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="js/external/vue.global.js"></script>
+        <script src="js/external/vuex.global.js"></script>
+        <script src="js/external/vuex-persistedstate.js"></script>
+        <script src="js/external/axios.js"></script>
+    </head>
+    <body>
+        <main id="content">
+            <navigation></navigation>
+            <h1>Create an Account</h1>
+            <form @submit.prevent="registerCustomer()">
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <div id="dets">
+                        <label>Username:</label><br>
+                        <label>First name:</label><br>
+                        <label>Last name:</label><br>
+                        <label>Email:</label><br>
+                        <label>Address:</label><br><br><br><br><br>
+                        <label>Password:</label><br>
+                    </div>
+                    <div>
+                        <input type="text" v-model="customer.username" required><br>
+                        <input type="text" v-model="customer.firstName" required><br>
+                        <input type="text" v-model="customer.surname" required><br>
+                        <input type="email" v-model="customer.emailAddress" required><br>
+                        <textarea rows="5" v-model="customer.shippingAddress" required></textarea><br>
+                        <input type="password" v-model="customer.password" required><br>
+                        <button type="submit">Create Account</button>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+        <script type="module" src="js/customer.js"></script>
+    </body>
+</html>

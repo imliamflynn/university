@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Examiner Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
+</head>
+<body>
+    <div class='header'>
+        
+        <div class='hideTopBanner'>
+            <p class='sessionUserBlurb' th:if="${userFirstName == null}"></p>
+            <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+        </div>
+        
+            <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+            
+            <h1>Create an Account</h1>      
+        </div>
+
+    <div th:replace="/navigator :: navbar"></div>
+
+    <div class='registerBox'>
+        <h2 class='registerTitle'>Enter your details below to create an account</h2>
+        <form method="post" th:action="@{/registerPost}" th:object="${registerRequest}" class='formStyle1'>
+            <fieldset>
+                <div class='registerTopTextFields'>
+                    <label>Username:</label>
+                    <input name="username" type="text" placeholder="Username" required>
+                    <div class="tooltip">&#9432;
+                        <span class="tooltiptext">Create a username with between 2 and 20 characters</span>
+                    </div>
+                    <br><br> <!--th:field="${registerRequest.username}"-->
+
+                    
+                    <label>Password:</label>
+                    <input name="password" type="password" placeholder="Password" required>
+                    <div class="tooltip">&#9432;
+                        <span class="tooltiptext">Create a secure password which contains at least 8 characters, including at least one number</span>
+                    </div>
+                    <br><br> <!--th:field="${registerRequest.password}"-->
+
+                    <label>Email:</label>
+                    <input name="email" class="emailRegisterField" type="text" placeholder="Email" required/><br><br> <!--th:field="${registerRequest.email}"-->
+                </div>
+                
+                <label class='strong'>Topic:</label><br>
+                
+                <div class='smallFormText'>
+                    <label>Please select the the topic below that best represents your thesis topic. This selection will be used to assist you to find a suitable examiner committee. You are able to change this field later when editing your account information if required.</label><br>  
+                </div>
+                
+                <div class='radioButtons'>
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Sciences</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Engineering</label><br>
+                    </div>
+                    
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Commerce</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Mathematics and Statistics</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Arts</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Medicine</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Information and Computer Science</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Languages</label><br>
+                    </div>
+
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Music and Film</label><br>
+                    </div>
+                    
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Law</label><br>
+                    </div>
+                    
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Theology</label><br>
+                    </div>
+                 
+                    <div class='radioButton'>
+                        <label><input type="radio" name="topic">Finance and Acounting</label>
+                    </div>
+                </div>
+                    
+                <label class='strong'>Blacklist:</label><br>
+                <label class="smallFormText">If you wish to blacklist any particular examiners, please note their names below. This is an optional field.<br></label>
+                <input id="blacklist" type="text" placeholder="Names"/>
+            </fieldset>
+            <div>
+                <input type="submit" value="Create Account" class='button registerButton'>
+            </div>
+        </form>
+    </div>
+
+    
+        <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.linkedin.com/school/university-of-otago/"><i class="icon ion-social-linkedin"></i></a><a href="https://www.facebook.com/otagouniversity/"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/graduate-research/study/phddoctoral/programme/">About</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/tools/privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">University of Otago © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    
+    
+</body>
+</html>

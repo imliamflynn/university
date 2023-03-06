@@ -1,0 +1,3 @@
+/home/james/Dropbox/University/COSC242/242-a2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/james/Dropbox/University/COSC242/242-a2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/james/Dropbox/University/COSC242/242-a2/cmake-build-debug/CMakeFiles/242_a2.dir

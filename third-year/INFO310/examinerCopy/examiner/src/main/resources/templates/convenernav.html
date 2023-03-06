@@ -1,0 +1,12 @@
+<div th:fragment="navbar" class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/home" class='active studentNav'>Home</a></li>
+            <li><a href="/editdetails" class='navbarDividers'>Edit My Details</a></li>
+            <li><a href="/viewcommittees" class='navbarDividers'>View Committees</a></li> <!-- Convenor only -->
+            <li><a href="/examiner" class='navbarDividers'>Add Examiners</a></li> <!-- Convenor only -->
+            <li th:if="${userFirstName == null}"><a href="/login" class='navbarDividers'>Log In</a></li>
+            <li th:unless="${userFirstName == null}"><a href="/logout" class='navbarDividers'>Log Out</a></li>
+        </ul>
+    </nav>
+</div>

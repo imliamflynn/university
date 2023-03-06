@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dca78753-5eb1-4d76-8aed-8cf1ba993b27" name="Sapphire" url="localhost:8888">
+        <fileTransfer rootFolder="/devel/llennonflynn/projects/new-cc" accessType="SFTP" host="localhost" port="8887" sshConfigId="a83aaaca-633c-4c16-abe8-d1d7df770950" sshConfig="llennonflynn@localhost:8887 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

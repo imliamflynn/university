@@ -1,0 +1,52 @@
+@startuml
+skinparam style strictuml
+
+actor "User" as user
+participant "Main" as main
+participant "MainMenu" as mm <<frame>>
+participant "ProductViewer" as view <<dialog>>
+participant "ProductJdbiDAO" as jdbi <<ProductDAO>>
+participant "SimpleListModel" as list <<productsModel>>
+database "H2 Database" as db <<data store>>
+
+create jdbi
+main -> jdbi : <<construct>>
+create mm
+main -> mm : <<construct(dao)>>
+
+user -> mm++ : Clicks "View Products"
+
+create view
+mm -> view++ : <<construct(dao)>>
+
+view -> jdbi++ : getProducts()
+
+jdbi -> db++ : select product
+
+return query result
+return products
+
+create list
+view -> list : <<construct>>
+view -> list++ : updateItems(products)
+list--
+view--
+
+user -> view : Selects Product
+
+user -> view++ : Clicks "Delete"
+
+view -> jdbi++ : removeProduct(product)
+
+jdbi -> db++ : delete from product where (...)
+
+return query result
+return products
+
+view -> list++ : updateItems(products)
+list--
+view--
+
+destroy view
+
+@enduml

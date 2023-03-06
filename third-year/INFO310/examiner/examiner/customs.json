@@ -1,0 +1,37 @@
+{
+    "elements": {
+        "buttons": {}
+    },
+    "attributes": {
+        "th:text": {
+            "context": "span"
+        },
+        "th:if": {
+            "context": "li"
+        },
+        "th:unless": {
+            "context": "li"
+        },
+        "th:action": {
+            "context": "form"
+        },
+        "th:replace": {
+            "context": "div"
+        },
+        "th:switch": {
+            "context": "div"
+        },
+        "th:field": {
+            "context": "input"
+        },
+        "th:case": {
+            "context": "div"
+        },
+        "th:each": {
+            "context": "tr"
+        },
+        "th:href": {
+            "context": "a"
+        }
+    }
+}

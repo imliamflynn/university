@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doohickies and Widgets</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="js/external/vue.global.js"></script>
+        <script src="js/external/vuex.global.js"></script>
+        <script src="js/external/vuex-persistedstate.js"></script>
+        <script src="js/external/axios.js"></script>
+    </head>
+    <body>
+        <main id="content">
+            <navigation></navigation>
+            <h1>How many do you want to buy?</h1>
+            <table>
+                <tr>
+                    <td>ID:</td>
+                    <td>{{product.productID}}</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{product.name}}</td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td>{{product.description}}</td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td>{{product.listPrice}}</td>
+                </tr>
+                <tr>
+                    <td>Quantity available:</td>
+                    <td>{{product.quantityInStock}}</td>
+                </tr>
+            </table>
+            <form @submit.prevent="addToCart()">
+                <fieldset>
+                    <legend>Quantity to buy</legend>
+                    <label for="quantity">How many?</label>
+                    <input v-model="quantity" type="number" id="quantity" required>
+                    <button type="submit">Add to Cart</button>
+                </fieldset>
+            </form>
+        </main>
+        <script type="module" src="js/cart.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+@startuml
+
+start
+
+:Submit Application;
+:Schedule Audition;
+
+if (Pass Audition?) then (Yes)
+   if (Pay Fees?) then (Yes)
+   :Enrol;
+   stop
+   else (No)
+      while (Remind to pay fees)
+         if (Pay Fees?) then (Yes)
+         :Enrol;
+         stop
+         else (No)
+         endif
+      endwhile
+      stop
+   endif
+else (No)
+   stop
+endif
+
+@enduml

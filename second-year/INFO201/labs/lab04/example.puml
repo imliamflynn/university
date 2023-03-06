@@ -1,0 +1,19 @@
+@startuml
+actor :Course\nApprover: as Approver
+actor :Student: as Student
+actor :International\nStudent: as International
+
+usecase (Enrol at\nUniversity) as EnrolUni
+usecase (Enrol in\nPaper) as EnrolPaper
+usecase (Visa\nCheck) as Visa
+usecase (Issue\nID Card) as Card
+
+Approver -- EnrolUni
+Student <|-- International
+EnrolUni <.. Visa : <<extend>>
+EnrolUni .> EnrolPaper : <<include>>
+Student - EnrolUni
+International - Visa
+EnrolPaper -[hidden]down- Card
+EnrolUni ..> Card : <<include>>
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+hide empty description
+
+state Asleep
+Asleep: Off
+state Locked
+Locked: On
+state Unlocked
+Unlocked: On
+
+Asleep -> Locked :Press On/Off\nButton
+Locked --> Unlocked :Unlock with\nFingerprint
+Locked --> Unlocked :Unlock with\nFace ID
+Locked --> Unlocked :Unlock with\nPassword
+Unlocked --> Asleep :Press On/Off\nButton
+
+@enduml

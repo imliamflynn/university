@@ -1,0 +1,91 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	color: black;
+	background-color: red;
+	font-family: Helvetica, sans-serif;
+	font-size: 10px;
+}
+body {
+	width: 700px;
+	margin: 0 auto;
+}
+header,
+main,
+footer {
+	padding: 10px;
+	margin: 0 0 10px 0;
+	border-radius: 5px;
+	background-color: orange;
+	color: inherit;
+}
+h1,
+h2 {
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+}
+h1 {
+	font-size: 48px;
+	display: inline-block;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 14px;
+}
+figure {
+	margin: 0;
+}
+/**   Header **/
+header {
+	position: fixed;
+	top: 0;
+	width: inherit;
+	z-index: 100;
+}
+/** Navigation **/
+nav ul {
+	list-style-type: none;
+	text-align: center;
+}
+nav li {
+	display: inline-block;
+	width: 75px;
+	margin: 0 10px 0 0;
+}
+nav li a {
+	display: block;
+}
+nav {
+	font-size: 12px;
+	text-align: right;
+	margin-top: 25px;
+}
+/**   main element   **/
+/*big top margin to display below header*/
+main {
+	margin-top: 135px;
+}
+/**   Contact page   **/
+.contact {
+	list-style-type: none;
+	display: flex;
+}
+.contact li {
+	text-align: center;
+	width: 32%;
+}
+/**   Footer   **/
+footer {
+	text-align: right;
+}
+#map{
+	width: 680px;
+	height: 550px;
+}
+#spin{
+	height: 275px;
+	margin-left: 225px;
+}

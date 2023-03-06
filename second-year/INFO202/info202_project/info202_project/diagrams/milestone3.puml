@@ -1,0 +1,36 @@
+@startuml
+skinparam style strictuml
+
+actor "Customer" as user
+participant "Products" as prods <<webpage>>
+participant "ProductModule" as prodMod <<Jooby module>>
+participant "ProductJdbiDAO" as jdbi <<ProductDAO>>
+database "H2 Database" as db 
+
+create prods
+prods++
+create prodMod
+prods -> prodMod++ : getAllProducts() /api/products
+
+create jdbi
+prodMod -> jdbi++ : dao.getProducts()
+
+jdbi -> db++ : SELECT * FROM PRODUCT ORDER BY PRODUCT_ID
+
+return query result
+return products
+return products
+
+user -> prods : Clicks a category button
+
+prods -> prodMod++ : filterByCategory(category) /api/categories/${category}
+
+prodMod -> jdbi++ : dao.filterByCategory(category)
+
+jdbi -> db++ : SELECT * FROM PRODUCT WHERE CATEGORY = :category
+
+return query result
+return products
+return products
+
+@enduml

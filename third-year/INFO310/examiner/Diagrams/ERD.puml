@@ -1,0 +1,73 @@
+@startuml ERD
+
+skinparam Style StrictUML
+skinparam Linetype ortho 
+skinparam Monochrome true 
+skinparam NodeSep 70
+skinparam RankSep 70
+
+'Entities
+entity User {
+	* User_ID VARCHAR(50)
+	__
+	* User_Login VARCHAR(45)
+	* Password VARCHAR(45)
+}
+
+entity Student {
+	* Student_ID VARCHAR(50)
+	__
+	* First_Name VARCHAR(45)
+	* Last_Name VARCHAR(45)
+	* Email VARCHAR (100)
+	* Thesis_Topic(s) VARCHAR (50) [1..n]
+	  Blacklist EXAMINER[0..n]
+	* User_ID VARCHAR(50) <<FK>>
+	* Examiner_ID VARCHAR(50) <<FK>>
+}
+
+entity Examiner {
+	* Examiner_ID VARCHAR(50)
+	__
+	* First_Name VARCHAR(45)
+	* Last_Name VARCHAR(45)
+	* Title VARCHAR(45)
+	* Location VARCHAR (45)
+	* University VARCHAR (100)
+	* Department VARCHAR (45)
+	* Email VARCHAR (100)
+	* Examiner_Interest(s) VARCHAR (50) [1..n]
+	* User_ID VARCHAR(50) <<FK>>
+	* Examiners_Committee_ID VARCHAR(50) <<FK>>
+}
+
+entity Convener {
+	* Convener_ID VARCHAR(50)
+'	* Examiner_ID VARCHAR (50) <<FK>>
+	__
+	* First_Name VARCHAR(45)
+	* Last_Name VARCHAR(45)
+	  Examiners_Commitee_Suggestion EXAMINER[1..3]
+}
+
+entity Examiners_Committee {
+	* Examiners_Committee_ID VARCHAR(50)
+	__
+	* Date date
+	* Examiners Examiner_ID[3] <<FK>>
+	* Student_ID VARCHAR(50) <<FK>>
+	* Convener_ID VARCHAR(50) <<FK>>
+}
+
+'Relationships
+User		||--||			Student
+User		||--||			Examiner
+User		||--||			Convener
+Student		}|-||			Examiner
+Student		||--o|			Examiners_Committee
+Examiner	}|--||			Examiners_Committee
+Examiner	||--o{			Examiners_Committee
+'Examiner	||-||			Convener
+Convener	||--o{			Examiners_Committee
+
+@enduml

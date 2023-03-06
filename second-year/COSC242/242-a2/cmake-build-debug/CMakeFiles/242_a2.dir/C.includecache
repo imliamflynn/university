@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/james/Dropbox/University/COSC242/242-a2/asgn/asgn2.c
+stdio.h
+-
+stdlib.h
+-
+getopt.h
+-
+mylib.h
+/home/james/Dropbox/University/COSC242/242-a2/asgn/mylib.h
+tree.h
+/home/james/Dropbox/University/COSC242/242-a2/asgn/tree.h
+
+/home/james/Dropbox/University/COSC242/242-a2/asgn/mylib.h
+stddef.h
+-
+stdbool.h
+-
+
+/home/james/Dropbox/University/COSC242/242-a2/asgn/tree.h
+

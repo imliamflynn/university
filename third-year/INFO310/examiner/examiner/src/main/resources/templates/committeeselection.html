@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Select a Committee | Examiner Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    
+</head>
+<body>
+    <div class='header'>
+        <div>
+            <p th:if="${userFirstName == null}"></p>
+            <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+        </div>
+           <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+            
+            <h1>Select a Committee</h1>      
+        </div>
+
+
+    <div th:replace="/navigator :: navbar"></div>
+
+    <br>
+    <!--a search field and button users can use to filter the examiner table
+    <form th:action=@(/committeeselection)" method="get">
+        <input id="txtSearch" type="text" name="keyword">
+        <button type="submit">Search</button>
+    </form>-->
+    
+    <div th:switch="${examiners}">
+        <h2 th:case="null">No examiners available.</h2>
+        <div th:case="*">
+            <h2>Examiners</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>University</th>
+                    <th>Department</th>
+                    <th>Topics</th>
+                    <th>Add</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr th:each="examiner : ${examiners}">
+                    <td th:text="${examiner.examinerID}"></td>
+                    <td th:text="${examiner.firstName}"></td>
+                    <td th:text="${examiner.lastName}"></td>
+                    <td th:text="${examiner.email}"></td>
+                    <td th:text="${examiner.location}"></td>
+                    <td th:text="${examiner.university}"></td>
+                    <td th:text="${examiner.department}"></td>
+                    <td th:text="${examiner.topic}"></td>
+                    <td><a th:href="@{/add/{examinerID}/(examinerID=${examiner.examinerID})}">Add</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+        <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.linkedin.com/school/university-of-otago/"><i class="icon ion-social-linkedin"></i></a><a href="https://www.facebook.com/otagouniversity/"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/graduate-research/study/phddoctoral/programme/">About</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/tools/privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">University of Otago © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

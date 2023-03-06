@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Phases</key>
+	<array>
+		<array>
+			<string>D&apos;où viens-tu?</string>
+			<string>D&apos;où viens-tu?</string>
+		</array>
+		<array>
+			<string>Ravi de vous rencontrer</string>
+			<string>Ravi de vous rencontrer</string>
+		</array>
+		<array>
+			<string>je ne comprends pas</string>
+			<string>je ne comprends pas</string>
+		</array>
+		<array>
+			<string>Quelle heure est-il?</string>
+			<string>Quelle heure est-il?</string>
+		</array>
+		<array>
+			<string>Combien ça coûte?</string>
+			<string>Combien ça coûte?</string>
+		</array>
+	</array>
+	<key>timeToSolve</key>
+	<integer>600</integer>
+	<key>pointsPerTIle</key>
+	<integer>10</integer>
+</dict>
+</plist>

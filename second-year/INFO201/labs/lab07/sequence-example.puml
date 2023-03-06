@@ -1,0 +1,62 @@
+@startuml
+
+' === Style Tweaks ===
+
+skinparam {
+  Style StrictUML
+  RoundCorner 5
+  ParticipantPadding 10
+  Padding 2
+  SequenceStereotype {
+    Font {
+      Size 12
+      Style plain
+    }
+  }
+  Defaultfontsize 14
+  Classfontsize 16
+}
+
+' === Actors / Participants
+
+actor "User" as user
+participant "MainMenu" as menu <<form>>
+participant "petForm : AddPetForm" as petForm <<form>>
+participant "dataStore : PetDataStore" as dataStore <<data store>>
+participant "Owner" as owner <<domain>>
+participant "pet : Pet" as pet <<domain>>
+
+' === Messages ===
+
+user -> menu : click "Add Pet"
+menu++
+menu -> petForm : displayForm()
+petForm++
+
+petForm -> dataStore : getSpecies()
+dataStore++
+return species
+petForm -> petForm : populateSpecies(species)
+
+user -> petForm : enter owner ID
+
+user -> petForm : click "Find Owner"
+petForm -> dataStore : findOwner(ownerId)
+dataStore++
+create owner
+dataStore -> owner : <<construct from\ndatabase>>
+return owner
+
+user -> petForm : enter pet details
+
+user -> petForm : click "Save Pet"
+create pet
+petForm -> pet : <<construct from form data>>
+petForm -> dataStore : savePet(owner, pet)
+dataStore++
+dataStore--
+return
+
+destroy petForm
+
+@enduml

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register Student | Examiner Finder</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class='header'>
+            <div>
+                <p th:if="${userFirstName == null}"></p>
+                <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+            </div>
+            
+            <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+            
+            <h1>Register As A New Student</h1>      
+        </div>
+
+        <div th:replace="/navigator :: navbar"></div>
+        
+        <h2>Add Your Details</h2>
+        <form method="post" th:action="@{/registerNewStudent}" th:object="${student}">
+            <div>
+                <input id="firstName" required type="text" placeholder="Enter First Name" th:field="${student.firstName}"/>
+                <input id="lastName" required type="text" placeholder="Enter Last Name" th:field="${student.lastName}"/>
+                <input id="email" required type="text" placeholder="Enter Email" th:field="${student.email}"/><br><br>
+                
+                <label class='strong'>Topic:</label><br>
+
+                <div class='smallFormText'>
+                    <label>Please enter a topic below that best represents your thesis topic. This selection will be used to assist you to find a suitable examiner committee. You are able to change this field later when editing your account information if required.</label><br>  
+                </div>
+                <input id="topic" required type="text" placeholder="Enter Topic" th:field="${student.topic}"/><br><br>
+                
+                <label class='strong'>Blacklist:</label><br>
+                <label class="smallFormText">If you wish to blacklist any particular examiners, please note their names below. This is an optional field.<br></label>
+                <input id="blacklist" type="text" placeholder="Names" th:field="${student.blacklist}">
+            </div>
+            
+            <div>
+                <input type="submit" value="Create Student">
+            </div>
+        </form>
+        
+        </body>
+</html>

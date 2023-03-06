@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dog Hire</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="dogGoRound.js"></script>
+    <script src="searchDogs.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Dog Hire</h1>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Welcome!</h2>
+    <p>
+        Welcome to Dog Hire, your online store for hiring dogs.
+    </p>
+
+    <div id="spin"></div>
+
+    <h3>Dog Search by Date</h3>
+    <p>Input a date and you can see which dogs are available on that day.</p>
+    <p>Don't use 0's, e.g. 02 (just use 2)</p>
+    <form name="dogBookingForm" id="dogBookingForm" onsubmit="return runProgram();">
+        <label for="day">Day</label>
+        <input id="day" type="text" required>
+        <label for="month">Month</label>
+        <input id="month" type="text" required>
+        <label for="year">Year</label>
+        <input id="year" type="text" required>
+        <input type="submit" value="Search">
+    </form>
+
+    <div id="availableDogs"></div>
+</main>
+
+<footer>
+    <p>
+        Dog Hire is not a real store. No products are available, and no money will be accepted.
+    </p>
+    <p>
+        All images from <a href="http://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> and are believed to
+        be in the public domain.
+    </p>
+</footer>
+</body>
+</html>

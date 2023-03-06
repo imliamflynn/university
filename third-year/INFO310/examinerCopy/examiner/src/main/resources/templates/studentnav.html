@@ -1,0 +1,12 @@
+<div th:fragment="navbar" class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/home" class='studentNav'>Home</a></li>
+            <li><a href="/committeeselection" class='navbarDividers'>Select Your Examiners</a></li> <!-- Student only -->
+            <li><a href="/editdetails" class='navbarDividers'>Edit My Details</a></li>
+            <li><a href="/mycommittee" class='navbarDividers'>My Committee</a></li> <!-- Student only -->
+            <li th:if="${userFirstName == null}"><a href="/login" class='navbarDividers'>Log In</a></li>
+            <li th:unless="${userFirstName == null}"><a href="/logout" class='navbarDividers'>Log Out</a></li>
+        </ul>
+    </nav>
+</div>

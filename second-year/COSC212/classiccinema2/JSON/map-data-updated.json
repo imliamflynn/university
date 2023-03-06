@@ -1,0 +1,23 @@
+{
+    "features": {
+        "1": {
+            "properties": {
+                "description": "HCI Lab"
+            }
+        },
+        "2": {
+            "type": "Feature",
+            "properties": {
+                "description": "Owheo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    170.518204,
+                    -45.866727
+                ]
+            },
+            "id": 3
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@startuml Committee_Selection_Use_Case
+ 
+'Actors
+actor : Student  : as student
+ 
+'Usecases
+rectangle "Log In" {
+	usecase (Input username) as username
+ 
+	usecase (Input password) as password
+ 
+	usecase (Login) as login
+ 
+	usecase (Authenticate user) as authentication
+}
+rectangle "Examiner Committee Selection" {
+	usecase (Fill out form) as form
+ 
+	usecase (Select interests/\nthesis topics) as topics
+ 
+	usecase (Select examiners) as examiners
+ 
+	usecase (Submit) as submit
+ 
+	usecase (Wait for\napproval) as wait
+}
+ 
+'Associations
+student 	--		username
+student 	-- 		password
+ 
+'Dependencies 
+login 		.> 	authentication		: <<requires>>
+username	..>	login			: <<includes>>
+password	..>	login			: <<includes>>
+login		..> 	form			: <<includes>>
+login		..> 	examiners		: <<includes>>
+login		...> 	topics			: <<includes>>
+form		..>	submit			: <<includes>>
+examiners	..> 	submit			: <<includes>>
+topics		..> 	submit			: <<includes>>
+submit		..>	wait			: <<includes>>
+ 
+@enduml

@@ -1,0 +1,70 @@
+html{
+    font-family: helvetica;
+}
+main{
+    width: 80%;
+    margin-left: 10%;
+}
+nav{
+    width: 80%;
+    margin-left: 10%;
+}
+nav div{
+    float: right;
+}
+nav a{
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid black;
+    background-color: #c6c6c6;
+}
+h1{
+    width: 100%;
+    background-color: #b5b5b5;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    text-align: center;
+}
+table {
+    margin-left: 20%;
+    width: 60%;
+}
+th, td {
+    border-bottom: 1px dotted black;
+}
+form{
+    width: 60%;
+    margin-left: 20%;
+}
+p{
+    margin-left: 30%;
+}
+ul {
+    text-align: center;
+}
+#checkout{
+    margin-left: 45%;
+}
+#dets{
+    float: left;
+    margin-right: 5px;
+}
+.bold{
+    font-weight: bold;
+}
+a:link { 
+    color: black;
+    text-decoration: none; 
+}
+a:visited { 
+    color: black;
+    text-decoration: none; 
+}
+#create:link{
+    color: blue;
+    text-decoration: underline; 
+}
+#create:visited { 
+    color: blue;
+    text-decoration: underline; 
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Select Your Examiners | Examiner Finder</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class='header'>
+            <div>
+                <p th:if="${userFirstName == null}"></p>
+                <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+            </div>
+            <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+
+            <h1>Select Your Examiners</h1>      
+        </div>
+
+        <div th:replace="/navigator :: navbar"></div>
+
+        <br>
+
+        <div th:switch="${examiners}">
+            <h2 th:case="null">No examiners available.</h2>
+            <div th:case="*">
+                <h2>Examiners</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Location</th>
+                            <th>University</th>
+                            <th>Department</th>
+                            <th>Topics</th>
+                            <th>Add</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="examiner : ${examiners}">
+                            <td th:text="${examiner.examinerID}"></td>
+                            <td th:text="${examiner.firstName}"></td>
+                            <td th:text="${examiner.lastName}"></td>
+                            <td th:text="${examiner.email}"></td>
+                            <td th:text="${examiner.location}"></td>
+                            <td th:text="${examiner.university}"></td>
+                            <td th:text="${examiner.department}"></td>
+                            <td th:text="${examiner.topics}"></td>
+                            <td><a th:href="@{/add/{examinerID}/(examinerID=${examiner.examinerID})}">Add</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

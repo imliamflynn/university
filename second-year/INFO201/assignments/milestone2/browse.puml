@@ -1,0 +1,30 @@
+@startuml
+
+actor Customer as cust
+actor Staff as staff
+
+rectangle Browsing{
+usecase (Browse Music) as bro
+usecase (Search for Music) as search
+usecase (Weekly Staff Picks) as picks
+usecase (Add to Cart) as add
+usecase (Update Cart) as up
+usecase (View Cart) as view
+usecase (Update Quantity) as quan
+usecase (Remove Item) as rem
+}
+
+staff -- picks
+cust -- picks
+cust -- bro
+cust -- search
+picks ..> add :<<extends>>
+bro ..> add :<<extends>>
+search ..> add :<<extends>>
+cust -- up :<<extends>>
+add ..> view :<<includes>>
+up <.. quan :<<extends>>
+up <.. rem :<<extends>>
+
+
+@enduml

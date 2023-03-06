@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New item</key>
+	<array>
+		<string>Hello</string>
+		<string>Bonjour</string>
+		<string>Hola</string>
+		<string>Kia Ora</string>
+	</array>
+	<key>New item - 2</key>
+	<array>
+		<string>Please</string>
+		<string>S&apos;il vous plaît</string>
+		<string>Por favor</string>
+		<string>Tena koa</string>
+	</array>
+	<key>New item - 3</key>
+	<array>
+		<string>Thank you</string>
+		<string>Merci</string>
+		<string>Gracias</string>
+		<string>Mauruuru koe</string>
+	</array>
+	<key>New item - 4</key>
+	<array>
+		<string>You’re welcome</string>
+		<string>De rien</string>
+		<string>De nada</string>
+		<string>Tena koe</string>
+	</array>
+	<key>New item - 5</key>
+	<array>
+		<string>Sorry</string>
+		<string>Pardon</string>
+		<string>Lo siento</string>
+		<string>Aroha mai</string>
+	</array>
+	<key>New item - 6</key>
+	<array>
+		<string>Yes</string>
+		<string>Oui</string>
+		<string>Sí</string>
+		<string>Ae</string>
+	</array>
+	<key>New item - 7</key>
+	<array>
+		<string>No</string>
+		<string>Non</string>
+		<string>No</string>
+		<string>Kao</string>
+	</array>
+	<key>New item - 8</key>
+	<array>
+		<string>I am ‘name’</string>
+		<string>Je suis ‘name’</string>
+		<string>Yo soy ‘name’</string>
+		<string>Ko ‘name’ ahau</string>
+	</array>
+	<key>New item - 9</key>
+	<array>
+		<string>How are you?</string>
+		<string>Comment vas-tu?</string>
+		<string>¿Cómo estás?</string>
+		<string>Kei te pehea koe?</string>
+	</array>
+	<key>New item - 10</key>
+	<array>
+		<string>Goodbye</string>
+		<string>Au revoir</string>
+		<string>Adiós</string>
+		<string>Haere rā</string>
+	</array>
+	<key>New item - 11</key>
+	<array>
+		<string>Where is…?</string>
+		<string>Où est...?</string>
+		<string>Dónde está...?</string>
+		<string>Kei hea...?</string>
+	</array>
+	<key>New item - 12</key>
+	<array>
+		<string>Place</string>
+		<string>Le lieu</string>
+		<string>Lugar</string>
+		<string>Wahi</string>
+	</array>
+	<key>New item - 13</key>
+	<array>
+		<string>Restaurant</string>
+		<string>Le restaurant</string>
+		<string>Restaurante</string>
+		<string>Wharekai</string>
+	</array>
+	<key>New item - 14</key>
+	<array>
+		<string>Hotel</string>
+		<string>Hôtel</string>
+		<string>Hotel</string>
+		<string>Hotera</string>
+	</array>
+	<key>New item - 15</key>
+	<array>
+		<string>Airport</string>
+		<string>Aéroport</string>
+		<string>Aeropuerto</string>
+		<string>Taunga rererangi</string>
+	</array>
+	<key>New item - 16</key>
+	<array>
+		<string>Market</string>
+		<string>Marché</string>
+		<string>Mercado</string>
+		<string>Te maakete</string>
+	</array>
+	<key>New item - 17</key>
+	<array>
+		<string>Help</string>
+		<string>Aider</string>
+		<string>Ayuda</string>
+		<string>Awhina</string>
+	</array>
+</dict>
+</plist>

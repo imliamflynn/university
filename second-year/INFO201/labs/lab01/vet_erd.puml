@@ -1,0 +1,20 @@
+@startuml Vet ERD
+
+hide circle
+
+entity customer as "Customer" {
+   * person ID
+   --
+   * name
+}
+
+entity pet as "Pet"  {
+   * pet ID
+   --
+   * name
+     d.o.b
+}
+
+customer |o--o{ pet 
+
+@enduml

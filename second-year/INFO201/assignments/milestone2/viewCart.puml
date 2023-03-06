@@ -1,0 +1,20 @@
+@startsalt
+{
+
+View Shopping Cart:
+{SI
+Product 
+^Quantity: 1^
+[Remove Item]
+~~
+Product
+^Quantity: 1^
+[Remove Item]
+~~
+Product
+^Quantity: 1^
+[Remove Item]
+}
+
+}
+@endsalt

@@ -1,0 +1,13 @@
+/* 
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Other/SQLTemplate.sql to edit this template
+ */
+/**
+ * Author:  thirzasmith
+ * Created: 7/04/2022
+ */
+
+
+drop table if exists ExaminerCommittee;
+drop table if exists Examiner;
+drop table if exists Student;

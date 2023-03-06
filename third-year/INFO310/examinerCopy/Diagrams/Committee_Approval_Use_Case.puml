@@ -1,0 +1,35 @@
+@startuml
+
+top to bottom direction
+
+actor Convenor as conv
+
+rectangle "Login Process" {
+    usecase (Login) as login
+	usecase (Input username) as username
+	usecase (Input password) as password
+	usecase (Authenticate user) as authentication
+}
+
+rectangle "Committee Approval"{
+    usecase (View proposed examiner committee/s) as check
+    usecase (Approve) as app
+    usecase (Decline) as dec
+    usecase (Provide feedback) as feed
+}
+
+conv -- password
+conv -- username
+
+login 		.> 		authentication		: <<require>>
+username	..>		login			: <<include>>
+password	..>		login			: <<include>>
+login		..> 		check			: <<include>>
+
+
+check <.. app :<<extend>>
+check <.. dec :<<extend>>
+
+dec <.. feed :<<extend>>
+
+@enduml

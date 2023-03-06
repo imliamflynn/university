@@ -1,0 +1,29 @@
+@startuml forkjoin-example
+start
+
+:Customer checks out cart;
+:Calculate and show total cost;
+
+if (Gift wrapping?) then ([yes])
+    :Apply additional charge;
+else ([no])
+endif
+
+:Customer confirms sale;
+:Show payment screen;
+
+repeat
+    fork
+        :Attempt payment;
+    fork again
+        :Cancel transaction\n   and empty cart;
+        stop
+    end fork
+repeat while (Payment Successful?) is ([no])
+->[yes];
+
+:Show customer sale finalised;
+:Forward sale details to shipping dispatch system;
+
+stop
+@enduml

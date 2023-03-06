@@ -1,0 +1,24 @@
+@startuml
+
+hide empty description
+
+state ApplicationSubmitted
+state AuditionScheduled
+state AuditionPassed
+state AuditionFailed
+state FeesPaid
+state FeesNotPaid
+state Enrolled
+
+[*] --> ApplicationSubmitted
+ApplicationSubmitted --> AuditionScheduled :Schedule Audition
+AuditionScheduled --> AuditionPassed :Pass Audition
+AuditionScheduled --> AuditionFailed :Fail Audition
+AuditionPassed --> FeesPaid :Pay Fees
+AuditionPassed --> FeesNotPaid :Fail to Pay Fees
+AuditionFailed --> [*] :Fail Enrolment
+FeesPaid --> Enrolled :Enrol
+FeesNotPaid --> [*] :Fail Enrolment
+Enrolled --> [*]
+
+@enduml

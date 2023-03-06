@@ -1,0 +1,16 @@
+@startsalt
+{
+  Full Name | "          "
+  Phone Number | "          "
+  Email Address | "          "
+  Are You At Least 18 | [] Yes 
+  .| [] No
+  Country |  "          "
+  Date of Birth*
+  (For tailored
+  recommendations) | "          "
+  Music Taste* |  "          "
+  Favourite Artists* | "          "
+  [ Cancel ] | [  Done  ]
+}
+@endsalt

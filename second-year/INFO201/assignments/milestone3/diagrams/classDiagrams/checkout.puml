@@ -1,0 +1,67 @@
+@startuml
+
+skinparam {
+  Style StrictUML	
+  RoundCorner 5
+  Padding 2
+  ClassAttributeIconSize 0
+  RankSep 80
+  NodeSep 100
+}
+
+class "SaleItem" as sal{
+- saleID : Integer
+- storeID : Integer
+- isrc : String
+- format : String
+- condition : String
+- salePrice : Integer
+- quantity : Integer
+}
+
+class "Sale" as sale{
+- saleID : Integer
+- storeID : Integer
+- saleDateTime : String
+- customerID : Integer
+- addressNumber : Integer
+- giftWrap : Boolean
+- storeDelivery : Boolean
+- GST : Integer
+- Status Integer
+}
+
+class "Customer" as cus{
+- customerID : Integer
+- familyName : String
+- givenName : String
+- birthDate : String
+- phone : Integer
+- email : String
+- streetAddress : String
+- suburb : String
+- postcode : String
+- passwordHash : String
+- notes : String
+- favArtists : String
+- favGenres : String
+- favEras : String
+}
+
+class "ShippingAddress" as shi{
+- customerID : Integer
+- addressNumber : Integer
+- recipient : String
+- streetAddress : String
+- suburb : String
+- city : String
+- country : String
+- postcode : String
+- contactPhone : Integer
+}
+
+sal "- saleItem\r0..*" <-down- sale
+cus "- customer\r1..1" <- sale
+cus -down-> "- shippingAddress\r1..*" shi
+
+@enduml

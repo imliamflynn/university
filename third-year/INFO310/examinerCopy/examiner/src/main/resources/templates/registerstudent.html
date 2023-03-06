@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register Student | Examiner Finder</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class='header'>
+            <div>
+                <p th:if="${userFirstName == null}"></p>
+                <p class='sessionUserBlurb' th:unless="${userFirstName == null}">Logged in as <span th:text="${userFirstName}"></span></p>
+            </div>
+            
+            <img src="otago_uni_banner.jpg" alt='Otago University Banner' class='otagoUniBanner'>
+            
+            <h1>Register</h1>      
+        </div>
+
+        
+        <h2>Please enter your details</h2>
+        <form method="post" th:action="@{/registerNewStudent}" th:object="${student}">
+            <div  class="formStyle1 registerStudentForm">
+                <div class="registerStudentFields">
+                    <label>First name:</label>
+                    <input id="firstName" required type="text" placeholder="Enter First Name" th:field="${student.firstName}"/><br>
+                    <label>Last name:</label>
+                    <input id="lastName" label="Last name:" required type="text" placeholder="Enter Last Name" th:field="${student.lastName}"/><br>
+                    <label>Email:</label>
+                    <input id="email" required label="Email:" type="text" placeholder="Enter Email" th:field="${student.email}"/><br><br>
+                </div>
+                
+                <label class='strong'>Topic:</label><br>
+
+                <div class='smallFormText'>
+                    <label>Please enter a topic below that best represents your thesis topic. This selection will be used to assist you to find a suitable examiner committee. You are able to change this field later when editing your account information if required.</label><br>  
+                </div>
+                <input id="topic" required type="text" placeholder="Enter Topic" th:field="${student.topic}"/><br><br>
+                
+                <label class='strong'>Blacklist:</label><br>
+                <label class="smallFormText">If you wish to blacklist any particular examiners, please note their names below. This is an optional field.<br></label>
+                <input id="blacklist" type="text" placeholder="Names" th:field="${student.blacklist}">
+            </div>
+            
+            <div>
+                <input class="button submitButton registerStudentButton" type="submit" value="Register">
+            </div>
+        </form>
+        
+         <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.linkedin.com/school/university-of-otago/"><i class="icon ion-social-linkedin"></i></a><a href="https://www.facebook.com/otagouniversity/"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/graduate-research/study/phddoctoral/programme/">About</a></li>
+                <li class="list-inline-item"><a href="https://www.otago.ac.nz/tools/privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">University of Otago © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        </body>
+</html>

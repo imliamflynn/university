@@ -1,0 +1,98 @@
+@startuml
+
+skinparam {
+  Style StrictUML
+  RoundCorner 5
+  ParticipantPadding 10
+  Padding 2
+  SequenceStereotype {
+    Font {
+      Size 12
+      Style plain
+    }
+  }
+  Defaultfontsize 14
+  Classfontsize 16
+}
+
+' === Actors / Participants
+
+actor "Customer" as cus
+
+participant "Menu" as menu <<form>>
+participant "SearchByForm" as sea <<form>>
+participant "SearchResultsForm" as sear <<form>>
+participant "AddToCartForm" as add <<form>>
+participant "CheckoutCartForm" as check <<form>>
+
+participant "RecordingDataStore" as rec <<data store>>
+participant "SaleDataStore" as saleDS <<data store>>
+
+participant "Recording" as recDom <<domain>>
+participant "Sale" as sale <<domain>>
+participant "SaleItem" as saleI
+
+' === Messages ===
+
+cus -> menu : Click "Search By"
+
+menu++
+menu -> sea : displayForm()
+sea++
+sea -> rec : getSearchTypes()
+rec++
+sea <-- rec : searchTypes
+rec--
+sea -> sea : populateSearchTypes()
+
+cus -> sea : Select search by artist
+cus -> sea : Type "Wu Tang Clannad"
+cus -> sea : Click "Search" button
+
+sea -> rec : searchByArtist("Wu Tang Clannad")
+rec++
+create recDom
+rec -> recDom : <<construct from database>>
+return Collection<Recording>
+
+sea -> sear : displayForm()
+sear++
+
+cus -> sear : Click "Add to Cart"
+
+sear -> rec : getFormats()
+rec++
+sear <-- rec : formats
+rec--
+sear -> rec : getConditions()
+rec++
+sear <-- rec : conditions
+rec--
+
+sear -> sear : populateFormats(formats)
+sear -> sear : populateConditions(conditions)
+sear -> add : displayForm()
+add++
+
+cus -> add : Select format, condition and quantity
+cus -> add : Click "Add to Cart"
+create saleI
+add -> saleI : <<Construct from database>>
+
+create sale
+add -> sale : addItem(saleItem)
+add -> check : displayForm()
+check++
+
+check -> saleDS : getSaleByID(ID)
+saleDS++
+check -> saleI : setGiftWrapped(true)
+
+check <-- saleDS : SaleItem
+destroy check
+
+
+
+
+
+@enduml

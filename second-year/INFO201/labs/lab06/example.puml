@@ -1,0 +1,55 @@
+@startuml
+
+' INFO 201 Normalisation Lab
+' Here we abuse the PlantUML Use Case diagram type somewhat to produce a functional dependency diagram.
+
+left to right direction
+
+skinparam rectangle {
+	RoundCorner<<relvar>> 0
+	BackgroundColor<<relvar>> whitesmoke
+
+	RoundCorner<<key>> 50
+	BackgroundColor<<key>> LemonChiffon
+	BorderColor<<key>> maroon
+}
+
+hide stereotype
+
+' NOTE: we adopt SQL-style <table>.<column> naming style to ensure globally unique attribute names.
+
+rectangle Staff <<relvar>> {
+
+	usecase "StaffID" as Staff.StaffID
+	
+	together {
+		usecase Salary
+		usecase FamilyName
+		usecase GivenName
+		usecase Building as Staff.Building
+		usecase RoomNumber as Staff.RoomNumber
+	}
+	
+	Staff.StaffID --> Salary
+	Staff.StaffID --> FamilyName
+	Staff.StaffID --> GivenName
+	Staff.StaffID --> Staff.Building
+	Staff.StaffID --> Staff.RoomNumber
+}
+
+rectangle Room <<relvar>> {
+	rectangle RoomPK <<key>> {
+		usecase Building as Room.Building
+		usecase RoomNumber as Room.RoomNumber
+	}
+
+	together {
+		usecase Capacity
+		usecase FloorArea
+	}
+	
+	RoomPK --> Capacity
+	RoomPK --> FloorArea
+}
+
+@enduml

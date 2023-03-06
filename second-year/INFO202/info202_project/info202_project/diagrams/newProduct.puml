@@ -1,0 +1,26 @@
+@startuml
+skinparam style strictuml
+
+actor "User" as user
+participant "MainMenu" as menu <<GUI>>
+participant "ProductEditor" as editor <<form>>
+participant "p : Product" as pro <<domain>>
+participant "ProductCollectionsDAO" as proDAO <<DAO>>
+
+user -> menu++ : click "Add a New Product"
+menu -> editor++ : run()
+
+user -> editor : Enter Product ID
+user -> editor : Enter Name
+user -> editor : Enter Description
+user -> editor : Enter Category
+user -> editor : Enter List Price
+user -> editor : Enter Quantity In Stock
+user -> editor : Click "Save"
+create pro
+editor -> pro : <<create with form data>>
+editor -> proDAO++ : saveProduct(p)
+proDAO--
+
+destroy editor
+@enduml
